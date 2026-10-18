@@ -1,0 +1,5 @@
+ADEGA RESERVA — LANDING PAGE DEMONSTRATIVA
+
+Abra index.html no navegador ou publique esta pasta em uma hospedagem estática.
+As fotografias e fontes são carregadas da internet (Unsplash e Google Fonts).
+WhatsApp abre uma conversa de demonstração sem número predefinido; Instagram e Facebook abrem suas páginas gerais.
