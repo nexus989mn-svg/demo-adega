@@ -21,7 +21,7 @@ nav{display:flex;gap:24px}
 nav a{font-size:8px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:#d9dce1}
 nav a:first-child{color:var(--blue);border-bottom:2px solid var(--blue);padding-bottom:10px}
 .order{background:#00c83f;color:#fff;border-radius:30px;padding:13px 18px;font-size:9px;font-weight:800;white-space:nowrap}
-.hero{position:relative;min-height:450px;display:flex;align-items:center;padding:42px 5%;overflow:hidden;background:linear-gradient(90deg,#050608 0%,#050608ed 31%,#05060833 72%),url('assets/hero.jpg') center 44%/cover}
+.hero{position:relative;min-height:450px;display:flex;align-items:center;padding:42px 5%;overflow:hidden;background:linear-gradient(90deg,#050608 0%,#050608ed 31%,#05060833 72%),url('/assets/hero.jpg') center 44%/cover}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#050608 0%,transparent 22%);pointer-events:none}
 .hero-copy{position:relative;z-index:1;max-width:470px}
 .kicker{font-size:9px;letter-spacing:3px;color:#4c9eff;text-transform:uppercase;font-weight:700}
@@ -57,13 +57,13 @@ section{border-bottom:1px solid #1f2a36}
 .category:hover img{transform:scale(1.04)}
 .category:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#020407e8)}
 .category strong{position:absolute;z-index:1;bottom:12px;left:12px;font-size:9px;text-transform:uppercase}
-.menu{display:grid;grid-template-columns:1fr 1fr;min-height:260px;background:linear-gradient(90deg,#050608f7,#0506084c),url('assets/drinks.jpg') center/cover}
+.menu{display:grid;grid-template-columns:1fr 1fr;min-height:260px;background:linear-gradient(90deg,#050608f7,#0506084c),url('/assets/drinks.jpg') center/cover}
 .menu-list{padding:24px}
 .menu-list h2{font-size:30px;text-transform:uppercase;margin:6px 0}
 .menu-list ul{padding:0;list-style:none;margin:12px 0}
 .menu-list li{font-size:9px;line-height:1.5;border-left:2px solid var(--blue);padding-left:9px;margin:7px 0}
 .menu-list li span{display:block;color:#a9b0bc;font-size:8px}
-.copao{min-height:170px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 5%;background:linear-gradient(90deg,#05060866,#05060840),url('assets/crowd.jpg') center/cover}
+.copao{min-height:170px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 5%;background:linear-gradient(90deg,#05060866,#05060840),url('/assets/crowd.jpg') center/cover}
 .copao h2{font-size:clamp(26px,4vw,42px);color:#ffd66b;margin:0 0 4px;text-transform:uppercase}
 .copao p{margin:0;color:#fff;font-size:16px}
 .copao .order{display:inline-flex;margin-top:10px}
@@ -124,17 +124,17 @@ footer{align-items:flex-start;padding:18px 4%;gap:12px}
 <section class="section" id="combos">
 <div class="section-head"><div class="kicker">Escolhas da casa</div><h2>Combos em <span class="blue">destaque</span></h2><p>Combinações para curtir com os amigos. Consulte os sabores, marcas e disponibilidade.</p></div>
 <div class="combo-grid">
-<article class="combo" style="--photo:url('assets/jack-redbull.jpg')"><div class="combo-copy"><div class="kicker">Combo de</div><h3>Jack</h3><p>1 JACK DANIEL'S Nº7<br>6 GELOS DE COCO<br>1 RED BULL</p><a class="btn" href="https://wa.me/?text=Quero%20o%20combo%20Jack">Quero esse combo →</a></div></article>
-<article class="combo" style="--photo:url('assets/redlabel-coco.jpg')"><div class="combo-copy"><div class="kicker">Combo</div><h3>Red Label</h3><p>6 RED BULL<br>1 WHISKY RED LABEL<br>6 GELOS DE COCO</p><a class="btn" href="https://wa.me/?text=Quero%20o%20combo%20Red%20Label">Quero esse combo →</a></div></article>
+<article class="combo" style="--photo:url('/assets/jack-redbull.jpg')"><div class="combo-copy"><div class="kicker">Combo de</div><h3>Jack</h3><p>1 JACK DANIEL'S Nº7<br>6 GELOS DE COCO<br>1 RED BULL</p><a class="btn" href="https://wa.me/?text=Quero%20o%20combo%20Jack">Quero esse combo →</a></div></article>
+<article class="combo" style="--photo:url('/assets/redlabel-coco.jpg')"><div class="combo-copy"><div class="kicker">Combo</div><h3>Red Label</h3><p>6 RED BULL<br>1 WHISKY RED LABEL<br>6 GELOS DE COCO</p><a class="btn" href="https://wa.me/?text=Quero%20o%20combo%20Red%20Label">Quero esse combo →</a></div></article>
 </div>
 </section>
 <section class="section" id="bebidas">
 <div class="section-head"><div class="kicker">Explore nossas categorias</div><h2>Mais para <span class="blue">aproveitar</span></h2><p>Explore as categorias e consulte os produtos disponíveis.</p></div>
 <div class="categories">
-<a class="category" href="#contato"><img src="assets/shelf-products.jpg" alt="Cervejas geladas"><strong>Cervejas geladas →</strong></a>
-<a class="category" href="#drinks"><img src="assets/jack-redbull.jpg" alt="Drinks e coquetéis"><strong>Drinks & coquetéis →</strong></a>
-<a class="category" href="#contato"><img src="assets/copo-rafa.jpg" alt="Bebidas refrescantes"><strong>Refrescantes →</strong></a>
-<a class="category" href="#combos"><img src="assets/redlabel-coco.jpg" alt="Destilados"><strong>Destilados →</strong></a>
+<a class="category" href="#contato"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?auto=format&fit=crop&w=900&q=85" alt="Cervejas geladas"><strong>Cervejas geladas →</strong></a>
+<a class="category" href="#drinks"><img src="/assets/jack-redbull.jpg" alt="Drinks e coquetéis"><strong>Drinks & coquetéis →</strong></a>
+<a class="category" href="#contato"><img src="https://images.unsplash.com/photo-1536935338788846bb9981813?auto=format&fit=crop&w=900&q=85" alt="Bebidas refrescantes"><strong>Refrescantes →</strong></a>
+<a class="category" href="#combos"><img src="/assets/redlabel-coco.jpg" alt="Destilados"><strong>Destilados →</strong></a>
 </div>
 </section>
 <section class="menu" id="drinks">
