@@ -1,56 +1,525 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#05080e">
-<title>Adega Reserva — Lounge & Drinks</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#08090b">
+<title>Adega Reserva — Lounge & Bebidas</title>
+
 <style>
-:root{--bg:#05080e;--panel:#0b1220;--blue:#4389ff;--blue2:#8bb7ff;--text:#f5f7fb;--muted:#a8b3c5;--line:rgba(160,183,220,.19);--max:1240px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.topline{height:3px;background:linear-gradient(90deg,var(--blue),#16396f 45%,transparent)}header{position:absolute;top:3px;left:0;right:0;z-index:10;border-bottom:1px solid rgba(255,255,255,.14);background:linear-gradient(#05080edb,transparent)}.nav{height:92px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:14px}.monogram{width:48px;height:48px;border:1px solid var(--blue);border-radius:50%;display:grid;place-items:center;color:var(--blue2);font:500 30px "Playfair Display",serif}.brand strong{display:block;font-size:14px;letter-spacing:.22em}.brand small{display:block;margin-top:6px;color:var(--blue2);font-size:10px;letter-spacing:.34em}.navlinks{display:flex;gap:30px;color:#d5dceb;font-size:12px}.navlinks a:hover{color:var(--blue2)}.outline,.primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 20px;border:1px solid var(--blue);font-size:11px;letter-spacing:.12em;font-weight:700;text-transform:uppercase;transition:.2s}.outline:hover{background:#4389ff18}.primary{background:var(--blue);border-color:var(--blue);box-shadow:0 12px 35px #1d5fc52c}.primary:hover{background:#2f75ee;transform:translateY(-2px)}.hero{min-height:790px;display:grid;align-items:center;position:relative;overflow:hidden;padding:145px 0 80px;background:#070b12}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#05080e 0%,#05080ef5 31%,#05080e9c 57%,#05080e38 100%),linear-gradient(0deg,#05080e 0%,transparent 35%),url("https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=2200&q=90") center/cover no-repeat;transform:scale(1.02)}.hero:after{content:"";position:absolute;width:460px;height:460px;border:1px solid #4389ff35;border-radius:50%;right:-190px;top:24%;box-shadow:0 0 0 65px #4389ff08,0 0 0 130px #4389ff05;pointer-events:none}.hero-content{position:relative;z-index:1;max-width:790px}.eyebrow{display:flex;align-items:center;gap:15px;color:var(--blue2);font-size:11px;letter-spacing:.32em;text-transform:uppercase}.eyebrow:before{content:"";height:1px;width:46px;background:var(--blue)}h1,h2,h3,p{margin-top:0}h1{font:500 clamp(3.7rem,8vw,7.7rem)/.94 "Playfair Display",serif;letter-spacing:-.055em;margin:28px 0}.hero h1 em{color:var(--blue2);font-weight:500}.hero p{max-width:610px;color:#c1cad8;font-size:17px;line-height:1.9}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.micro{margin-top:48px;color:#a6b5cc;font-size:10px;letter-spacing:.25em;text-transform:uppercase}.micro span{color:var(--blue);padding-right:10px}.section{padding:105px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:38px}.section h2{font:500 clamp(2.5rem,5vw,4.7rem)/1.02 "Playfair Display",serif;letter-spacing:-.04em;margin:17px 0 0}.section-intro{max-width:450px;color:var(--muted);line-height:1.8;margin:0}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.category{min-height:355px;position:relative;overflow:hidden;border:1px solid var(--line);background:#101826}.category img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:transform .65s}.category:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#03060cf5 0%,#03060c73 42%,#03060c05 100%)}.category:hover img{transform:scale(1.07)}.category-copy{position:absolute;z-index:1;left:23px;right:18px;bottom:24px}.category-copy small{color:var(--blue2);letter-spacing:.2em;font-size:10px;text-transform:uppercase}.category-copy h3{font:500 31px "Playfair Display",serif;margin:10px 0}.category-copy span{font-size:12px;color:#d0d8e6}.feature{display:grid;grid-template-columns:1fr 1fr;min-height:560px;background:#0a101a;border:1px solid var(--line)}.feature-photo{min-height:440px;position:relative}.feature-photo img{position:absolute;width:100%;height:100%;object-fit:cover}.feature-copy{padding:clamp(35px,6vw,80px);align-self:center}.feature-copy h2{font-size:clamp(2.6rem,4.5vw,4.3rem)}.feature-copy p{color:var(--muted);line-height:1.9}.feature-copy .primary{margin-top:10px}.band{background:radial-gradient(ellipse at 50% 0%,#122b50 0%,#080e18 54%,#05080e 100%);text-align:center;padding:100px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.band h2{font:500 clamp(2.6rem,6vw,5rem)/1.03 "Playfair Display",serif;max-width:800px;margin:20px auto}.band p{color:var(--muted);max-width:650px;margin:24px auto 30px;line-height:1.8}.social-row{display:flex;justify-content:center;gap:12px;margin-top:24px}.social{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);padding:12px 16px;color:#dbe5f5;font-size:12px}.social:hover{border-color:var(--blue);color:var(--blue2)}.social svg,.wa-float svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}footer{padding:35px 0;color:#7f8da2;font-size:11px}footer .foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot .brand strong{font-size:12px}.foot .brand small{font-size:9px}.wa-float{position:fixed;right:22px;bottom:22px;z-index:20;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#4389ff;color:white;box-shadow:0 8px 28px #0009;border:1px solid #8bb7ff}.wa-float svg{width:27px;height:27px}.mobile-menu{display:none}
-@media(max-width:850px){.wrap{width:min(100% - 36px,var(--max))}.nav{height:78px}.navlinks{display:none}.nav>.outline{padding:12px 13px;font-size:10px}.hero{min-height:780px;padding:140px 0 60px}.hero:before{background:linear-gradient(90deg,#05080ef5 0%,#05080edb 58%,#05080e70 100%),linear-gradient(0deg,#05080e 0%,transparent 55%),url("https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1300&q=85") 58% center/cover no-repeat}.hero-content{max-width:650px}h1{font-size:clamp(3.7rem,13vw,6rem)}.hero p{font-size:15px}.section{padding:76px 0}.section-head{display:block}.section-intro{margin-top:20px}.categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.category{min-height:300px}.category-copy{left:16px;bottom:18px}.category-copy h3{font-size:26px}.feature{grid-template-columns:1fr}.feature-photo{min-height:330px}.feature-copy{padding:36px 26px 42px}.band{padding:78px 18px}.foot{flex-wrap:wrap}.micro{line-height:1.8}}
-@media(max-width:430px){.brand{gap:9px}.monogram{width:40px;height:40px;font-size:25px}.brand strong{font-size:11px;letter-spacing:.18em}.brand small{font-size:8px;letter-spacing:.24em}.nav>.outline{letter-spacing:.04em}.hero{min-height:740px}.hero .actions{display:grid}.actions a{width:100%}.categories{gap:9px}.category{min-height:250px}.category-copy h3{font-size:23px}.category-copy span{font-size:11px}.social-row{flex-wrap:wrap}.foot{align-items:flex-start!important;flex-direction:column}}
+:root {
+  --bg: #08090b;
+  --panel: #101114;
+  --text: #f4f0e9;
+  --muted: #aaa7a1;
+  --gold: #c7a16a;
+  --blue: #087cff;
+  --line: #292a2d;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+header {
+  height: 76px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px solid var(--line);
+  background: #08090bf5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+.logo span { color: var(--gold); }
+nav { display: flex; gap: 25px; }
+nav a {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #d5d1ca;
+}
+nav a:hover { color: var(--gold); }
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 21px;
+  background: var(--gold);
+  color: #08090b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  font-size: 10px;
+}
+.button.blue { background: var(--blue); color: white; }
+.button.outline { background: transparent; color: white; border: 1px solid #777; }
+
+.hero {
+  min-height: 680px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 7%;
+  overflow: hidden;
+  background: #0b0b0c;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg,#050608 0%,#050608e8 35%,#05060855 75%,#05060820),
+    linear-gradient(0deg,#08090b 0%,transparent 45%),
+    url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=2000&q=90")
+    center/cover;
+}
+.hero-copy { position: relative; z-index: 1; max-width: 650px; }
+.eyebrow {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.hero h1 {
+  margin: 25px 0;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(50px, 7vw, 91px);
+  line-height: .98;
+}
+.hero h1 span { color: var(--gold); }
+.hero p {
+  color: #c1bfbb;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 440px;
+}
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.hero-label {
+  position: absolute;
+  right: 6%;
+  bottom: 38px;
+  z-index: 2;
+  border: 1px solid #9b825f;
+  padding: 19px 25px;
+  background: #08090bbf;
+}
+.hero-label strong { font: 22px Georgia,serif; }
+.hero-label small {
+  display: block;
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  border-block: 1px solid var(--line);
+}
+.benefit {
+  padding: 27px 15px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+.benefit:last-child { border: 0; }
+.benefit strong {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.benefit small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+section.content { padding: 95px 6%; }
+.section-heading { margin-bottom: 38px; }
+.section-heading h2 {
+  margin: 13px 0;
+  font: 400 clamp(34px,4.5vw,57px)/1.05 Georgia,serif;
+}
+.section-heading p {
+  max-width: 580px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+}
+.gold { color: var(--gold); }
+.blue-text { color: #339dff; }
+
+/* COMBOS: fotografias largas, não mini-cardápios */
+.combo-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 18px;
+}
+.combo {
+  min-height: 460px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 32px;
+  overflow: hidden;
+  background: #141414;
+  border: 1px solid #303033;
+}
+.combo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg,#030405f5 0%,#030405a8 42%,#03040518 100%),
+    var(--photo) center/cover;
+  transition: transform .5s;
+}
+.combo:hover::before { transform: scale(1.035); }
+.combo-content { position: relative; max-width: 440px; }
+.tag {
+  display: inline-block;
+  padding: 9px 12px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 9px;
+}
+.combo h3 {
+  font: 400 clamp(30px,3.6vw,45px)/1.05 Georgia,serif;
+  margin: 18px 0 12px;
+}
+.combo p { color: #ccc8c1; font-size: 13px; line-height: 1.8; }
+.combo .button { margin-top: 12px; }
+
+/* GALERIA DE AMBIENTE */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-auto-rows: 170px;
+  gap: 12px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background: #151515;
+}
+.gallery-item img { transition: transform .6s, filter .5s; filter: brightness(.78); }
+.gallery-item:hover img { transform: scale(1.05); filter: brightness(1); }
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 30% 0 0;
+  background: linear-gradient(transparent,#030405d9);
+}
+.gallery-item h3 {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 23px;
+  margin: 0;
+  font: 26px Georgia,serif;
+}
+.g1 { grid-column: span 5; grid-row: span 2; }
+.g2 { grid-column: span 7; grid-row: span 2; }
+.g3 { grid-column: span 7; grid-row: span 2; }
+.g4 { grid-column: span 5; grid-row: span 2; }
+.g5 { grid-column: span 12; grid-row: span 2; }
+.g5 h3 { font-size: clamp(25px,4vw,44px); }
+
+.feature-banner {
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  padding: 7%;
+  position: relative;
+  background:
+    linear-gradient(90deg,#050607 0%,#050607df 42%,#05060720 100%),
+    url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1800&q=90")
+    center/cover;
+}
+.feature-banner h2 {
+  font: 400 clamp(35px,5vw,62px)/1.05 Georgia,serif;
+  max-width: 650px;
+}
+.feature-banner p {
+  max-width: 420px;
+  color: #c3c0ba;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.drink-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.drink {
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+.drink img { filter: brightness(.72); transition: .5s; }
+.drink:hover img { filter: brightness(.95); transform: scale(1.04); }
+.drink::after {
+  content: "";
+  position: absolute;
+  inset: 25% 0 0;
+  background: linear-gradient(transparent,#000d);
+}
+.drink-copy { position: absolute; z-index: 1; bottom: 25px; left: 28px; }
+.drink h3 { font: 32px Georgia,serif; margin: 0 0 9px; }
+.drink p { font-size: 10px; letter-spacing: 2px; }
+
+.contact {
+  padding: 70px 6%;
+  background: linear-gradient(110deg,#111c29,#08090b);
+  border-block: 1px solid #253342;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.contact h2 { font: 400 clamp(30px,4vw,49px) Georgia,serif; margin: 12px 0; }
+.contact p { color: #bbb; line-height: 1.7; }
+
+footer { padding: 40px 6% 24px; }
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--line);
+}
+.social { display: flex; gap: 10px; flex-wrap: wrap; }
+.social a { padding: 13px 17px; border: 1px solid #474747; font-size: 10px; letter-spacing: 1px; }
+.social a:hover { border-color: var(--gold); color: var(--gold); }
+.footer-bottom {
+  padding-top: 20px;
+  color: #777;
+  font-size: 9px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.float-wa {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  border-radius: 40px;
+  padding: 15px 19px;
+  background: #087b43;
+  color: white;
+  font-weight: 800;
+  font-size: 11px;
+  box-shadow: 0 5px 25px #0008;
+}
+
+@media(max-width:760px) {
+  header { height: 65px; padding: 0 17px; }
+  .logo { font-size: 16px; letter-spacing: 1.5px; }
+  nav { display: none; }
+  .header-button { padding: 12px; font-size: 9px; }
+  .hero { min-height: 680px; align-items: flex-start; padding: 95px 23px 25px; }
+  .hero::before {
+    background:
+      linear-gradient(180deg,#050608f7 0%,#050608c9 40%,#05060845 75%,#08090b 100%),
+      url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1000&q=85")
+      58% bottom/auto 75% no-repeat,#08090b;
+  }
+  .hero h1 { font-size: clamp(49px,12vw,72px); }
+  .hero p { font-size: 14px; }
+  .hero-label { right: 18px; bottom: 18px; padding: 13px 16px; }
+  .hero-label strong { font-size: 18px; }
+  .benefit { padding: 20px 5px; }
+  .benefit strong { font-size: 9px; }
+  .benefit small { font-size: 8px; line-height: 1.5; }
+  section.content { padding: 62px 17px; }
+  .combo-grid { grid-template-columns: 1fr; }
+  .combo { min-height: 410px; padding: 23px; }
+  .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 145px; gap: 8px; }
+  .g1,.g2,.g3,.g4 { grid-column: span 1; grid-row: span 2; }
+  .g5 { grid-column: span 2; grid-row: span 2; }
+  .gallery-item h3 { font-size: 15px; left: 12px; bottom: 13px; }
+  .g5 h3 { font-size: 24px; }
+  .feature-banner { min-height: 380px; padding: 26px; }
+  .drink-gallery { grid-template-columns: 1fr; }
+  .drink { height: 290px; }
+  .contact { display: block; padding: 48px 20px; }
+  .contact .button { margin-top: 15px; }
+  .footer-top { align-items: flex-start; flex-direction: column; }
+  .footer-bottom { line-height: 1.8; }
+}
 </style>
 </head>
+
 <body>
-<div class="topline"></div>
-<header><div class="wrap nav">
-<a class="brand" href="#inicio" aria-label="Adega Reserva início"><span class="monogram">R</span><span><strong>ADEGA RESERVA</strong><small>LOUNGE &amp; DRINKS</small></span></a>
-<nav class="navlinks" aria-label="Navegação"><a href="#colecao">COLEÇÃO</a><a href="#experiencia">EXPERIÊNCIA</a><a href="#contato">CONTATO</a></nav>
-<a class="outline" href="#contato">PEÇA AGORA ↗</a>
-</div></header>
+<header>
+  <a class="logo" href="#inicio"><span>◆</span> ADEGA RESERVA</a>
+  <nav>
+    <a href="#combos">Combos</a>
+    <a href="#experiencias">Experiências</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="button header-button" href="#combos">Ver destaques ↗</a>
+</header>
+
 <main>
-<section class="hero" id="inicio"><div class="wrap"><div class="hero-content">
-<div class="eyebrow">Uma experiência fora do comum</div>
-<h1>O prazer de<br><em>escolher bem.</em></h1>
-<p>Bebidas especiais, atmosfera marcante e bons momentos que merecem ser celebrados. Descubra sua próxima escolha na Adega Reserva.</p>
-<div class="actions">
-<a class="primary" href="#contato"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-12.8 7.2L3 20l1.3-4.9A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.8 8.5c.5 2.5 2.2 4.2 4.7 4.7"/></svg> Pedir pelo WhatsApp</a>
-<a class="outline" href="#colecao">Explorar coleção ↓</a>
-</div><div class="micro"><span>━━━━</span> Curadoria especial · Bons momentos</div>
-</div></div></section>
-<section class="section" id="colecao"><div class="wrap">
-<div class="section-head"><div><div class="eyebrow">Sua próxima descoberta</div><h2>Escolhas com<br>personalidade.</h2></div><p class="section-intro">Uma seleção para diferentes gostos e ocasiões. Explore as categorias e chame nossa equipe para encontrar sua próxima favorita.</p></div>
-<div class="categories">
-<a class="category" href="#contato"><img loading="lazy" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=85" alt="Taças e garrafas de vinho"><div class="category-copy"><small>01 / Clássicos</small><h3>Vinhos</h3><span>Explorar seleção ↗</span></div></a>
-<a class="category" href="#contato"><img loading="lazy" src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=800&q=85" alt="Whisky servido em copo"><div class="category-copy"><small>02 / Intensos</small><h3>Whisky</h3><span>Explorar seleção ↗</span></div></a>
-<a class="category" href="#contato"><img loading="lazy" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=85" alt="Drinks preparados"><div class="category-copy"><small>03 / Marcantes</small><h3>Destilados</h3><span>Explorar seleção ↗</span></div></a>
-<a class="category" href="#contato"><img loading="lazy" src="https://images.unsplash.com/photo-1513558161293-cdaf765edc?auto=format&fit=crop&w=800&q=85" alt="Bebidas geladas"><div class="category-copy"><small>04 / Descontraídos</small><h3>Cervejas</h3><span>Explorar seleção ↗</span></div></a>
-</div></div></section>
-<section class="section" id="experiencia" style="padding-top:0"><div class="wrap"><div class="feature">
-<div class="feature-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=90" alt="Ambiente sofisticado de bar lounge"></div>
-<div class="feature-copy"><div class="eyebrow">A arte de receber bem</div><h2>Mais que uma bebida.<br><em style="color:var(--blue2)">Um momento.</em></h2><p>Uma atmosfera intimista, luzes na medida certa e uma seleção pensada para acompanhar conversas, encontros e comemorações.</p><a class="primary" href="#contato">Conheça nossa seleção ↗</a></div>
-</div></div></section>
-<section class="band" id="contato"><div class="eyebrow" style="justify-content:center">Seu próximo brinde começa aqui</div><h2>Escolheu. Chamou.<br>Curtiu o momento.</h2><p>Toque no botão e comece seu pedido pelo WhatsApp. Esta é uma página demonstrativa: o botão abre uma conversa de exemplo, sem exigir número real.</p>
-<a class="primary" href="https://wa.me/?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20demonstrativa%20da%20Adega%20Reserva%20e%20quero%20conhecer%20a%20sele%C3%A7%C3%A3o." target="_blank" rel="noopener"> <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-12.8 7.2L3 20l1.3-4.9A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.8 8.5c.5 2.5 2.2 4.2 4.7 4.7"/></svg> Abrir WhatsApp ↗</a>
-<div class="social-row">
-<a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg> Instagram ↗</a>
-<a class="social" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h1.7V1.4C17 1.2 15.8 1 14.4 1 11.4 1 9.5 2.8 9.5 6.2V9H6v4h3.5v8Z"/></svg> Facebook ↗</a>
-</div></section>
+<section class="hero" id="inicio">
+  <div class="hero-copy">
+    <div class="eyebrow">Adega Reserva · seleção especial</div>
+    <h1>Seu momento.<br><span>Sua bebida.</span></h1>
+    <p>Destilados selecionados, cervejas geladas e combinações especiais para transformar encontros em experiências memoráveis.</p>
+    <div class="actions">
+      <a class="button" href="#combos">Explorar combos ↗</a>
+      <a class="button outline" href="#experiencias">Conhecer a adega</a>
+    </div>
+  </div>
+  <div class="hero-label"><strong>SELEÇÃO RESERVA</strong><small>BEBIDAS & EXPERIÊNCIAS</small></div>
+</section>
+
+<div class="benefits">
+  <div class="benefit"><strong>Rótulos especiais</strong><small>Uma seleção para cada ocasião</small></div>
+  <div class="benefit"><strong>Combos exclusivos</strong><small>Encontre sua combinação</small></div>
+  <div class="benefit"><strong>Atendimento direto</strong><small>Consulte disponibilidade</small></div>
+</div>
+
+<section class="content" id="combos">
+  <div class="section-heading">
+    <div class="eyebrow">Escolhas da casa · 01</div>
+    <h2>Combos em <span class="gold">destaque</span></h2>
+    <p>Combinações para curtir com os amigos, com o sabor e o estilo que combinam com seu momento.</p>
+  </div>
+
+  <div class="combo-grid">
+    <article class="combo" style="--photo:url('https://images.unsplash.com/photo-1607622750671-6cd9a99eabd9?auto=format&fit=crop&w=1300&q=90')">
+      <div class="combo-content">
+        <span class="tag">Combo clássico</span>
+        <h3>Jack Daniel’s<br>+ Red Bull</h3>
+        <p>Whisky e energético para completar o encontro. Consulte tamanhos e disponibilidade.</p>
+        <a class="button" href="https://wa.me/?text=Olá!%20Quero%20consultar%20o%20combo%20Jack%20Daniel's%20%2B%20Red%20Bull">Consultar combo ↗</a>
+      </div>
+    </article>
+
+    <article class="combo" style="--photo:url('https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=1200&q=90')">
+      <div class="combo-content">
+        <span class="tag">Combo refrescante</span>
+        <h3>Red Label<br>+ gelo de coco</h3>
+        <p>Uma combinação marcante para variar o brinde e aproveitar a noite.</p>
+        <a class="button" href="https://wa.me/?text=Olá!%20Quero%20consultar%20o%20combo%20Red%20Label%20%2B%20gelo%20de%20coco">Consultar combo ↗</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="content" id="experiencias">
+  <div class="section-heading">
+    <div class="eyebrow">Descubra · 02</div>
+    <h2>Uma adega. <span class="gold">Novas experiências.</span></h2>
+    <p>Fotografia em destaque, composições amplas e ambiente de lounge para explorar cada categoria.</p>
+  </div>
+
+  <div class="gallery">
+    <a class="gallery-item g1" href="#contato">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&fit=crop&w=900&q=90" alt="Bebidas geladas">
+      <h3>Cervejas geladas ↗</h3>
+    </a>
+    <a class="gallery-item g2" href="#drinks">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1300&q=90" alt="Drinks e coquetéis">
+      <h3>Drinks & coquetéis ↗</h3>
+    </a>
+    <a class="gallery-item g3" href="#combos">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=1200&q=90" alt="Destilados">
+      <h3>Destilados selecionados ↗</h3>
+    </a>
+    <a class="gallery-item g4" href="#contato">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=90" alt="Bebidas para compartilhar">
+      <h3>Combinações especiais ↗</h3>
+    </a>
+    <a class="gallery-item g5" href="#contato">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=90" alt="Ambiente lounge">
+      <h3>Seu próximo momento começa aqui ↗</h3>
+    </a>
+  </div>
+</section>
+
+<section class="feature-banner">
+  <div>
+    <div class="eyebrow">A experiência Reserva</div>
+    <h2>Mais que uma bebida.<br><span class="gold">Um momento especial.</span></h2>
+    <p>Escolha seus rótulos, descubra novas combinações e prepare o próximo brinde.</p>
+    <a class="button" href="#contato">Fale com a adega ↗</a>
+  </div>
+</section>
+
+<section class="content" id="drinks">
+  <div class="section-heading">
+    <div class="eyebrow">Bar & inspiração · 03</div>
+    <h2>Drinks para <span class="gold">aproveitar.</span></h2>
+    <p>Clássicos, coquetéis e combinações para inspirar sua próxima noite.</p>
+  </div>
+  <div class="drink-gallery">
+    <a class="drink" href="#contato">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1100&q=90" alt="Coquetéis">
+      <div class="drink-copy"><h3>Clássicos do bar</h3><p>COQUETÉIS · SABORES · INSPIRAÇÃO ↗</p></div>
+    </a>
+    <a class="drink" href="#contato">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1100&q=90" alt="Drinks especiais">
+      <div class="drink-copy"><h3>Novas combinações</h3><p>FRUTAS · GELO · MOMENTOS ↗</p></div>
+    </a>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div>
+    <div class="eyebrow">Atendimento direto</div>
+    <h2>Vamos escolher sua próxima bebida?</h2>
+    <p>Consulte preços, combos e disponibilidade pelo WhatsApp.</p>
+  </div>
+  <a class="button blue" href="https://wa.me/?text=Olá!%20Quero%20consultar%20as%20bebidas%20da%20Adega%20Reserva" target="_blank" rel="noopener">Falar pelo WhatsApp ↗</a>
+</section>
 </main>
-<footer><div class="wrap foot"><a class="brand" href="#inicio"><span class="monogram">R</span><span><strong>ADEGA RESERVA</strong><small>LOUNGE &amp; DRINKS</small></span></a><span>Uma experiência feita para bons momentos.</span><a href="#inicio">Voltar ao topo ↑</a></div></footer>
-<a class="wa-float" href="https://wa.me/?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20da%20Adega%20Reserva." target="_blank" rel="noopener" aria-label="Abrir WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.8 7.2L3 20l1.3-4.9A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.8 8.5c.5 2.5 2.2 4.2 4.7 4.7"/></svg></a>
-</body></html>
+
+<footer>
+  <div class="footer-top">
+    <a class="logo" href="#inicio"><span>◆</span> ADEGA RESERVA</a>
+    <div class="social">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">FACEBOOK ↗</a>
+      <a href="https://wa.me/?text=Olá!%20Adega%20Reserva" target="_blank" rel="noopener">WHATSAPP ↗</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Adega Reserva · Todos os direitos reservados</span>
+    <span>Beba com responsabilidade · Venda proibida para menores de 18 anos</span>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/?text=Olá!%20Quero%20consultar%20a%20Adega%20Reserva" target="_blank" rel="noopener">WhatsApp ↗</a>
+</body>
+</html>
