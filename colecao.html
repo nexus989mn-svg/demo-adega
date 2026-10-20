@@ -122,4 +122,57 @@
 }
 </style>
 
+
+<style id="beer-position-correction">
+/* Corona permanece exatamente como está */
+.beer-board .corona-card {
+  grid-column: 1 / -1 !important;
+  grid-row: 1 !important;
+}
+
+/* Skol: texto à esquerda, imagem à direita */
+.beer-board .skol-card {
+  grid-column: 1 / -1 !important;
+  grid-row: 2 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) !important;
+  align-items: center !important;
+  gap: 18px !important;
+}
+.beer-board .skol-card img {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+.beer-board .skol-card .beer-copy {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  min-width: 0 !important;
+}
+
+/* Budweiser abaixo da Skol: imagem à esquerda, texto à direita */
+.beer-board .bud-card {
+  grid-column: 1 / -1 !important;
+  grid-row: 3 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) !important;
+  align-items: center !important;
+  gap: 18px !important;
+}
+.beer-board .bud-card img {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+.beer-board .bud-card .beer-copy {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  min-width: 0 !important;
+}
+</style>
+
 </body></html>
