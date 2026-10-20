@@ -254,21 +254,22 @@ h1, h2 {
   font-size: 18px;
 }
 
+
 @media (max-width: 700px) {
   .topo {
-    min-height: 66px;
     padding: 16px 5%;
+    gap: 10px;
   }
 
   .marca {
-    font-size: 20px;
-    letter-spacing: 3px;
+    font-size: clamp(15px, 4.2vw, 20px);
+    letter-spacing: 2px;
+    white-space: nowrap;
   }
 
   .menu {
-    gap: 13px;
+    gap: 12px;
     font-size: 9px;
-    letter-spacing: .5px;
   }
 
   .menu a:nth-child(2) {
@@ -276,125 +277,56 @@ h1, h2 {
   }
 
   .hero {
-    min-height: 360px;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 48px 7%;
-  }
-
-  .hero h1 {
-    font-size: 43px;
-  }
-
-  .hero-detalhe {
-    font-size: 35px;
-  }
-
-  .faixa {
-    grid-template-columns: 1fr;
-  }
-
-  .faixa-imagem {
-    min-height: 260px;
-    max-height: 350px;
-    padding: 25px;
-  }
-
-  .faixa-imagem img {
-    max-height: 300px;
-  }
-
-  .faixa-texto {
-    padding: 35px 7% 42px;
-  }
-
-  .faixa-texto h2 {
-    font-size: 34px;
-  }
-
-  .buchanans .faixa-imagem {
-    order: 1;
-  }
-
-  .buchanans .faixa-texto {
-    order: 2;
-  }
-
-  .beneficios {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 28px 7%;
-  }
-
-  .rodape {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-
-/* Layout responsivo sem cortes nem colisões */
-@media (max-width: 700px) {
-  .hero {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 26px;
+    display: block;
+    min-height: 0;
     padding: 42px 7%;
   }
 
   .hero-conteudo {
-    width: 100%;
-    min-width: 0;
+    max-width: 100%;
   }
 
   .hero h1 {
-    overflow-wrap: break-word;
-  }
-
-  .hero-detalhe {
-    width: 100%;
-    font-size: clamp(36px, 10vw, 58px);
-    line-height: 1.15;
-    letter-spacing: 2px;
-    overflow-wrap: anywhere;
+    font-size: clamp(36px, 9vw, 48px);
+    line-height: 1.08;
   }
 
   .faixa {
     display: flex;
     flex-direction: column;
-    min-width: 0;
+    min-height: 0;
   }
 
   .faixa-imagem {
     width: 100%;
     height: auto;
     min-height: 0;
+    max-height: none;
     padding: 0;
-    flex: none;
+    overflow: visible;
   }
 
   .faixa-imagem img {
+    display: block;
     width: 100%;
     height: auto;
     min-height: 0;
     max-height: none;
+    max-width: 100%;
     object-fit: contain;
   }
 
   .faixa-texto {
-    width: 100%;
-    min-width: 0;
-    padding: 32px 7% 38px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0;
+    width: 100%;
+    padding: 32px 7% 40px;
   }
 
   .faixa-texto h2 {
-    max-width: 100%;
     font-size: clamp(30px, 7.5vw, 42px);
     line-height: 1.15;
-    overflow-wrap: break-word;
   }
 
   .faixa-texto p {
@@ -402,23 +334,22 @@ h1, h2 {
     line-height: 1.7;
   }
 
-  .faixa-texto .botao {
-    max-width: 100%;
-    margin-top: 2px;
-  }
-
   .beneficios {
     grid-template-columns: 1fr;
   }
-}
 
+  .rodape {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header class="topo">
-  <a class="marca" href="#inicio">ADEGA</a>
+  <a class="marca" href="#inicio">ADEGA RESERVA</a>
 
   <nav class="menu">
     <a href="#inicio">Início</a>
@@ -438,8 +369,6 @@ h1, h2 {
       </p>
       <a class="botao" href="#colecao">Explorar seleção</a>
     </div>
-
-    <div class="hero-detalhe" aria-label="Reserva">RESERVA</div>
   </section>
 
   <!-- FAIXA BRANCA: BUCHANAN'S -->
