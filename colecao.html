@@ -63,55 +63,33 @@
 @media(max-width:650px){.beer-board{padding:46px 7%}.beer-grid{gap:22px 14px}.beer-card img{height:230px}.beer-copy h3{font-size:22px}.beer-copy p{font-size:12px}}
 </style>
 <article class="product"><div><div class="eyebrow">03 — COMBINAÇÕES</div><h2>Beefeater Pink + energético</h2><p>Uma combinação de cores vibrantes e personalidade para quem procura algo diferente.</p></div><img src="/assets/beefeater-pink.png" alt="Beefeater Pink com energético"></article></section></main><footer><span>ADEGA RESERVA</span><a href="index.html">← INÍCIO</a><span>UMA SELEÇÃO PARA BONS MOMENTOS</span></footer>
-<style id="beer-layout-fix">
+
+
+
+<style id="beer-layout-final">
 .beer-board .beer-grid{
   display:grid!important;
   grid-template-columns:repeat(2,minmax(0,1fr))!important;
-  gap:26px 18px!important;
+  gap:24px 18px!important;
   align-items:start!important;
 }
-.beer-board .beer-card{
-  display:flex!important;
-  flex-direction:column!important;
-  width:100%!important;
-  min-width:0!important;
-  overflow:visible!important;
-  background:transparent!important;
-}
-.beer-board .beer-card img{
-  display:block!important;
-  width:100%!important;
-  height:auto!important;
-  aspect-ratio:auto!important;
-  object-fit:contain!important;
-  object-position:center!important;
-}
 .beer-board .corona-card{
-  grid-column:1!important;
+  grid-column:1/-1!important;
   grid-row:1!important;
   display:grid!important;
-  grid-template-columns:1fr 1fr!important;
-  gap:12px!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  gap:18px!important;
   align-items:center!important;
 }
 .beer-board .corona-card img{
   width:100%!important;
   height:auto!important;
+  aspect-ratio:auto!important;
   object-fit:contain!important;
 }
 .beer-board .corona-card .beer-copy{
   min-width:0!important;
-  padding:8px 0!important;
-}
-.beer-board .beer-copy h3{
-  font-size:clamp(19px,4vw,28px)!important;
-  line-height:1.2!important;
-  overflow-wrap:anywhere!important;
-}
-.beer-board .beer-copy p{
-  font-size:clamp(13px,2.8vw,16px)!important;
-  line-height:1.6!important;
-  overflow-wrap:break-word!important;
+  padding:12px!important;
 }
 .beer-board .bud-card{
   grid-column:1!important;
@@ -123,20 +101,24 @@
 }
 .beer-board .bud-card img,
 .beer-board .skol-card img{
+  display:block!important;
   width:100%!important;
   height:auto!important;
   aspect-ratio:auto!important;
   object-fit:contain!important;
 }
+.beer-board .beer-card{min-width:0!important;overflow:visible!important}
+.beer-board .beer-copy h3{overflow-wrap:normal!important;word-break:normal!important}
+.beer-board .beer-copy p{overflow-wrap:break-word!important}
 .beer-board .corona-gold{color:#c7a253!important}
 .beer-board .skol-blue{color:#1683ff!important}
 .beer-board .bud-red{color:#ed3038!important}
 @media(max-width:480px){
-  .beer-board{padding-left:7%!important;padding-right:7%!important}
-  .beer-board .beer-grid{gap:24px 14px!important}
-  .beer-board .corona-card{grid-template-columns:1fr 1fr!important;gap:9px!important}
-  .beer-board .beer-copy h3{font-size:clamp(17px,4.5vw,23px)!important}
-  .beer-board .beer-copy p{font-size:clamp(12px,3.2vw,14px)!important}
+ .beer-board .beer-grid{gap:22px 14px!important}
+ .beer-board .corona-card{gap:10px!important}
+ .beer-board .corona-card .beer-copy{padding:4px!important}
+ .beer-board .beer-copy h3{font-size:clamp(18px,5vw,25px)!important;line-height:1.2!important}
+ .beer-board .beer-copy p{font-size:14px!important;line-height:1.6!important}
 }
 </style>
 
