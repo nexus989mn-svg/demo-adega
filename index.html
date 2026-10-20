@@ -385,19 +385,48 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-\n
-/* FUNDO ABSTRATO VERDE ADEGA */
-body {
+
+
+
+
+/* FUNDO VERDE GLOBAL */
+html, body {
   background-color: #061006;
+}
+
+body {
   background-image:
-    linear-gradient(rgba(0, 10, 0, 0.45), rgba(0, 10, 0, 0.65)),
+    linear-gradient(rgba(0, 10, 0, 0.30), rgba(0, 10, 0, 0.45)),
     url('/assets/fundo-verde-adega.png');
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-/* FIM FUNDO ABSTRATO VERDE ADEGA */
+
+/* Deixa o fundo visível nas áreas de conteúdo */
+.hero,
+.maca,
+.reserva,
+.reserva .faixa-texto,
+.beneficios {
+  background-color: transparent !important;
+}
+
+.hero {
+  background-image: linear-gradient(
+    rgba(0, 10, 0, 0.35),
+    rgba(0, 10, 0, 0.35)
+  );
+}
+
+.topo {
+  background: rgba(10, 10, 10, 0.90);
+}
+
+.buchanans {
+  background: var(--branco);
+}
 
 </style>
 </head>
