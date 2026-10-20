@@ -733,6 +733,25 @@ footer,
 }
 </style>
 
+
+<style id="vinho-reserva-fundo-vermelho">
+#vinho-reserva-fundo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+#vinho-reserva-fundo::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  z-index: -1;
+  background: url('/assets/fundo-vermelho-red-label.png?v=3')
+              center / cover no-repeat;
+  filter: blur(9px);
+  transform: scale(1.04);
+}
+</style>
+
 </head>
 
 <body>
@@ -816,7 +835,7 @@ footer,
   </section>
 
   <!-- FAIXA INFERIOR: VINHO RESERVA -->
-  <section class="faixa reserva" id="reserva">
+  <section id="vinho-reserva-fundo" class="faixa reserva" id="reserva">
     <div class="faixa-imagem">
       <img
         src="/assets/03_vinho_reserva.png"
