@@ -255,20 +255,22 @@ h1, h2 {
 }
 
 
+
 @media (max-width: 700px) {
   .topo {
-    padding: 16px 5%;
-    gap: 10px;
+    min-height: 66px;
+    padding: 14px 5%;
+    gap: 8px;
   }
 
   .marca {
-    font-size: clamp(15px, 4.2vw, 20px);
+    font-size: clamp(14px, 4vw, 19px);
     letter-spacing: 2px;
     white-space: nowrap;
   }
 
   .menu {
-    gap: 12px;
+    gap: 10px;
     font-size: 9px;
   }
 
@@ -279,7 +281,7 @@ h1, h2 {
   .hero {
     display: block;
     min-height: 0;
-    padding: 42px 7%;
+    padding: 40px 7%;
   }
 
   .hero-conteudo {
@@ -291,19 +293,27 @@ h1, h2 {
     line-height: 1.08;
   }
 
+  .hero-detalhe {
+    display: none;
+  }
+
   .faixa {
     display: flex;
     flex-direction: column;
     min-height: 0;
+    height: auto;
+    overflow: visible;
   }
 
   .faixa-imagem {
+    display: block;
     width: 100%;
     height: auto;
     min-height: 0;
     max-height: none;
     padding: 0;
     overflow: visible;
+    line-height: 0;
   }
 
   .faixa-imagem img {
@@ -320,22 +330,32 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex: none;
     width: 100%;
+    height: auto;
+    min-height: 0;
     padding: 32px 7% 40px;
   }
 
   .faixa-texto h2 {
     font-size: clamp(30px, 7.5vw, 42px);
     line-height: 1.15;
+    margin-bottom: 17px;
   }
 
   .faixa-texto p {
     max-width: 100%;
+    margin-bottom: 24px;
     line-height: 1.7;
+  }
+
+  .faixa-texto .botao {
+    margin-top: 0;
   }
 
   .beneficios {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .rodape {
@@ -343,6 +363,7 @@ h1, h2 {
     text-align: center;
   }
 }
+
 </style>
 </head>
 
