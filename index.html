@@ -140,7 +140,9 @@ h1, h2 {
 }
 
 .faixa-imagem {
-  min-height: 420px;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,11 +153,11 @@ h1, h2 {
 .faixa-imagem img {
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 420px;
-  max-width: none;
+  height: auto;
+  min-height: 0;
+  max-width: 100%;
   max-height: none;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -330,56 +332,83 @@ h1, h2 {
   }
 }
 
-/* Imagens amplas e layout adaptado para celular */
-.hero-detalhe {
-  overflow-wrap: anywhere;
-}
 
+/* Layout responsivo sem cortes nem colisões */
 @media (max-width: 700px) {
   .hero {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 48px 7%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+    padding: 42px 7%;
+  }
+
+  .hero-conteudo {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero h1 {
+    overflow-wrap: break-word;
   }
 
   .hero-detalhe {
-    font-size: clamp(38px, 11vw, 64px);
-    letter-spacing: 4px;
+    width: 100%;
+    font-size: clamp(36px, 10vw, 58px);
+    line-height: 1.15;
+    letter-spacing: 2px;
+    overflow-wrap: anywhere;
   }
 
   .faixa {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
   }
 
   .faixa-imagem {
     width: 100%;
-    min-height: 0;
     height: auto;
+    min-height: 0;
     padding: 0;
+    flex: none;
   }
 
   .faixa-imagem img {
-    display: block;
     width: 100%;
     height: auto;
     min-height: 0;
     max-height: none;
-    max-width: none;
     object-fit: contain;
   }
 
   .faixa-texto {
-    padding: 34px 7% 42px;
+    width: 100%;
+    min-width: 0;
+    padding: 32px 7% 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
   }
 
   .faixa-texto h2 {
-    font-size: clamp(30px, 8vw, 42px);
+    max-width: 100%;
+    font-size: clamp(30px, 7.5vw, 42px);
+    line-height: 1.15;
+    overflow-wrap: break-word;
   }
 
-  .buchanans .faixa-imagem img,
-  .maca .faixa-imagem img,
-  .reserva .faixa-imagem img {
-    width: 100%;
+  .faixa-texto p {
+    max-width: 100%;
+    line-height: 1.7;
+  }
+
+  .faixa-texto .botao {
+    max-width: 100%;
+    margin-top: 2px;
+  }
+
+  .beneficios {
+    grid-template-columns: 1fr;
   }
 }
 
