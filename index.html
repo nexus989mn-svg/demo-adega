@@ -334,12 +334,45 @@ h1, h2 {
   }
 }
 
-/* AJUSTE POSIÇÃO DA IMAGEM DO VINHO */
+
+
+/* VINHO: IMAGEM INTEIRA, SEM CORTES */
+.reserva .faixa-imagem {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  align-self: stretch;
+}
+
+.reserva .faixa-imagem img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
 @media (max-width: 700px) {
+  .reserva .faixa-imagem {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
   .reserva .faixa-imagem img {
-    transform: translateY(80px);
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    transform: none;
   }
 }
+
 </style>
 </head>
 
