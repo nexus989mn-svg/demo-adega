@@ -17,4 +17,123 @@
 .hero-copy .outline{top:85%;padding:13px 20px}
 }
 
-</style></head><body><header><a class="logo" href="index.html">ADEGA RESERVA</a><nav><a href="#colecao">COLEÇÃO</a><a href="#produtos">PRODUTOS</a><a href="#detalhes">DETALHES</a></nav></header><main><section class="hero" id="colecao"><div class="hero-image"><img src="/assets/combo-jack-destaque.png" alt="Combo Jack Daniel’s"></div><div class="hero-copy"><div class="eyebrow">ADEGA RESERVA APRESENTA</div><h1>SELEÇÃO EXCLUSIVA</h1><p>RÓTULOS MARCANTES · COMBINAÇÕES ESPECIAIS</p><a class="outline" href="#produtos">DESCUBRA A COLEÇÃO</a></div></section><section id="produtos"><article class="product"><div><div class="eyebrow">01 — DESTILADOS</div><h2>Combo Jack Daniel’s</h2><p>Jack Daniel’s, água de coco e energético em uma combinação marcante para compartilhar bons momentos.</p></div><img src="/assets/combo-jack.png" alt="Combo Jack Daniel’s com água de coco e energético"></article><article class="product"><div><div class="eyebrow">02 — CERVEJAS</div><h2>Corona Extra</h2><p>Um clássico para aproveitar momentos especiais, com limão, gelo e boa companhia.</p></div><img src="/assets/corona.png" alt="Corona Extra com limão e gelo"></article><article class="product"><div><div class="eyebrow">03 — COMBINAÇÕES</div><h2>Beefeater Pink + energético</h2><p>Uma combinação de cores vibrantes e personalidade para quem procura algo diferente.</p></div><img src="/assets/beefeater-pink.png" alt="Beefeater Pink com energético"></article></section></main><footer><span>ADEGA RESERVA</span><a href="index.html">← INÍCIO</a><span>UMA SELEÇÃO PARA BONS MOMENTOS</span></footer></body></html>
+</style>
+<style id="adega-tabuleiro-final">
+#adega-tabuleiro {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:auto auto;
+  gap:12px;
+  width:100%;
+  box-sizing:border-box;
+  padding:12px 0;
+}
+#adega-tabuleiro .tile {
+  min-width:0;
+  position:relative;
+  overflow:hidden;
+  background:#0a0a0a;
+}
+#adega-tabuleiro .tile img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+#adega-tabuleiro .corona-tile {
+  grid-column:1;
+  grid-row:1;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+#adega-tabuleiro .corona-tile img {
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+#adega-tabuleiro .tile-copy {
+  color:#fff;
+  font-size:14px;
+  line-height:1.5;
+}
+#adega-tabuleiro .tile-copy h3 {
+  margin:0 0 6px;
+  color:#c9a45c;
+  font-size:22px;
+}
+#adega-tabuleiro .bud-tile {
+  grid-column:1;
+  grid-row:2;
+  aspect-ratio:4/5;
+}
+#adega-tabuleiro .bud-tile h3 {
+  color:#e53935;
+}
+#adega-tabuleiro .skol-tile {
+  grid-column:2;
+  grid-row:2;
+  aspect-ratio:4/5;
+}
+#adega-tabuleiro .skol-tile img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+#adega-tabuleiro .skol-tile h3 {
+  position:absolute;
+  left:5px;
+  top:12px;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  color:#2585ff;
+  background:#080808d9;
+  padding:8px 4px;
+  margin:0;
+  font-size:20px;
+}
+</style>
+\n</head><body><header><a class="logo" href="index.html">ADEGA RESERVA</a><nav><a href="#colecao">COLEÇÃO</a><a href="#produtos">PRODUTOS</a><a href="#detalhes">DETALHES</a></nav></header><main><section class="hero" id="colecao"><div class="hero-image"><img src="/assets/combo-jack-destaque.png" alt="Combo Jack Daniel’s"></div><div class="hero-copy"><div class="eyebrow">ADEGA RESERVA APRESENTA</div><h1>SELEÇÃO EXCLUSIVA</h1><p>RÓTULOS MARCANTES · COMBINAÇÕES ESPECIAIS</p><a class="outline" href="#produtos">DESCUBRA A COLEÇÃO</a></div></section><section id="produtos"><article class="product"><div><div class="eyebrow">01 — DESTILADOS</div><h2>Combo Jack Daniel’s</h2><p>Jack Daniel’s, água de coco e energético em uma combinação marcante para compartilhar bons momentos.</p></div><img src="/assets/combo-jack.png" alt="Combo Jack Daniel’s com água de coco e energético"></article><article class="product"><div><div class="eyebrow">02 — CERVEJAS</div><h2>Corona Extra</h2><p>Um clássico para aproveitar momentos especiais, com limão, gelo e boa companhia.</p></div><img src="/assets/corona.png" alt="Corona Extra com limão e gelo"></article><article class="product"><div><div class="eyebrow">03 — COMBINAÇÕES</div><h2>Beefeater Pink + energético</h2><p>Uma combinação de cores vibrantes e personalidade para quem procura algo diferente.</p></div><img src="/assets/beefeater-pink.png" alt="Beefeater Pink com energético"></article></section></main><footer><span>ADEGA RESERVA</span><a href="index.html">← INÍCIO</a><span>UMA SELEÇÃO PARA BONS MOMENTOS</span></footer>
+<script id="adega-tabuleiro-script">
+(() => {
+  const headings = [...document.querySelectorAll('h1,h2,h3')];
+  const title = headings.find(e => e.textContent.trim().includes('Corona Extra'));
+  if (!title) return;
+  const section = title.closest('section');
+  if (!section || document.getElementById('adega-tabuleiro')) return;
+
+  const grid = document.createElement('div');
+  grid.id = 'adega-tabuleiro';
+  grid.innerHTML = `
+    <article class="tile corona-tile">
+      <img src="/assets/corona.png" alt="Corona Extra">
+      <div class="tile-copy">
+        <h3>Corona Extra</h3>
+        <span>Um clássico para aproveitar momentos especiais, com limão, gelo e boa companhia.</span>
+      </div>
+    </article>
+    <article class="tile bud-tile">
+      <img src="/assets/budweiser.jpg" alt="Budweiser">
+      <div class="tile-copy">
+        <h3>Budweiser</h3>
+        <span>Gelada, refrescante e perfeita para compartilhar bons momentos.</span>
+      </div>
+    </article>
+    <article class="tile skol-tile">
+      <img src="/assets/skol-beats.jpg" alt="Skol Beats">
+      <h3>Skol Beats</h3>
+      <div class="tile-copy" style="position:absolute;bottom:0;left:0;right:0;background:#080808dd;padding:8px">
+        Uma opção marcante para curtir a ocasião.
+      </div>
+    </article>`;
+  title.parentElement.insertBefore(grid, title);
+
+  let node = grid.nextElementSibling;
+  while (node) {
+    const next = node.nextElementSibling;
+    if (node.matches('p,img,figure,.product-image,.product-visual')) node.remove();
+    node = next;
+  }
+})();
+</script>
+\n</body></html>
