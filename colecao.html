@@ -1,39 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#07140a">
+<meta name="theme-color" content="#050505">
 <title>Coleção Exclusiva | Adega Reserva</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#061008;color:#f5f0e5;font-family:Arial,sans-serif}
-header{padding:18px 20px;border-bottom:1px solid #bca66c;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{font-family:Georgia,serif;color:#ead39a;font-size:23px;letter-spacing:2px}
-header a,.voltar{color:#ead39a;text-decoration:none;border:1px solid #bca66c;padding:11px 14px;font-size:12px;letter-spacing:1px}
-.intro{text-align:center;padding:44px 20px 30px;background:radial-gradient(ellipse at top,#1b4724,#061008 70%)}
-.eyebrow{color:#ead39a;font-size:12px;letter-spacing:4px}
-h1{font-family:Georgia,serif;font-size:clamp(34px,8vw,54px);font-weight:normal;margin:15px 0}
-.intro p{color:#d7d7ce;line-height:1.6}
-.grid{max-width:1000px;margin:auto;padding:12px 18px 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px}
-.item{overflow:hidden;border:1px solid #655c39;background:#0b180e}
-.item img{display:block;width:100%;height:290px;object-fit:contain;background:#f4eee8}
-.item-info{padding:20px}
-.item small{color:#d8c184;letter-spacing:2px}
-.item h2{font:normal 25px Georgia,serif;margin:10px 0}
-.item p{color:#c9cec5;line-height:1.6;font-size:14px;min-height:44px}
-footer{text-align:center;padding:24px;border-top:1px solid #655c39;color:#d5c18b;font-family:Georgia,serif;letter-spacing:2px}
-@media(max-width:420px){header{padding:15px 12px}.logo{font-size:18px}.item img{height:250px}}
+html{scroll-behavior:smooth}
+body{margin:0;background:#050505;color:#f4eee5;font-family:Georgia,"Times New Roman",serif}
+a{color:inherit;text-decoration:none}
+header{height:68px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:#050505}
+.logo{font-size:21px;letter-spacing:4px;color:#e5d3b4}
+header nav{display:flex;gap:30px;font:10px Arial,sans-serif;letter-spacing:2px;color:#d2c6b3}
+header nav a:hover{color:#fff}
+.hero{position:relative;min-height:570px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 60%,#25211d 0%,#0c0b0a 42%,#030303 78%);text-align:center;padding:65px 20px}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.025),transparent 70%);pointer-events:none}
+.hero-copy{position:relative;z-index:2;width:100%}
+.kicker{font:10px Arial,sans-serif;letter-spacing:5px;color:#c8b79a;text-transform:uppercase}
+.hero h1{font-size:clamp(48px,10vw,108px);font-weight:normal;letter-spacing:clamp(3px,1vw,12px);margin:28px 0 14px;text-transform:uppercase}
+.hero p{font:11px Arial,sans-serif;letter-spacing:4px;color:#c9c0b3;text-transform:uppercase}
+.hero-mark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.hero-mark img{width:min(55%,360px);height:390px;object-fit:contain;opacity:.94;filter:drop-shadow(0 25px 28px #000)}
+.hero-copy h1{text-shadow:0 3px 20px #000}
+.hero-copy .kicker,.hero-copy h1,.hero-copy p{position:relative;z-index:3}
+.hero-copy h1{margin-top:260px}
+.hero-link{display:inline-block;margin-top:24px;border:1px solid #a99776;padding:13px 24px;font:10px Arial,sans-serif;letter-spacing:3px;color:#e0d0b2}
+.hero-link:hover{background:#d6c3a1;color:#090909}
+.manifesto{padding:90px 8%;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;background:linear-gradient(135deg,#0a0a0a,#111 60%,#050505)}
+.manifesto h2{font-size:clamp(32px,5vw,55px);font-weight:normal;line-height:1.12;margin:18px 0}
+.manifesto p,.feature p{font:13px/1.9 Arial,sans-serif;color:#c8c3bb;max-width:430px}
+.manifesto img{width:100%;max-height:410px;object-fit:contain}
+.feature{min-height:390px;padding:65px 8%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px;border-top:1px solid #28231c}
+.feature:nth-of-type(even){background:#090909}
+.feature:nth-of-type(odd){background:#0d0c0b}
+.feature img{width:100%;height:330px;object-fit:contain}
+.feature h2{font-size:clamp(30px,4vw,48px);font-weight:normal;line-height:1.15;margin:16px 0}
+.feature .kicker{letter-spacing:4px}
+.feature.reverse img{order:2}
+.feature.reverse .copy{order:1}
+.gallery{padding:80px 5%;background:#050505}
+.gallery-title{text-align:center;margin-bottom:42px}
+.gallery-title h2{font-size:clamp(30px,5vw,48px);font-weight:normal;margin:15px 0}
+.gallery-grid{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:18px;align-items:center}
+.gallery-card{background:#0c0c0c;padding:12px;border:1px solid #211e19}
+.gallery-card img{display:block;width:100%;height:270px;object-fit:contain}
+.gallery-card h3{font-size:19px;font-weight:normal;margin:16px 5px 8px}
+.gallery-card p{font:11px/1.7 Arial,sans-serif;color:#aaa;margin:0 5px 10px}
+.gallery-card.central img{height:350px}
+footer{border-top:1px solid #393024;padding:28px 5%;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#cbb994;font:10px Arial,sans-serif;letter-spacing:3px}
+@media(max-width:650px){
+ header{height:62px;padding:0 5%}.logo{font-size:15px;letter-spacing:2px}
+ header nav{gap:12px;font-size:8px;letter-spacing:1px}
+ .hero{min-height:490px;padding:45px 15px}
+ .hero-mark img{width:75%;height:320px}
+ .hero-copy h1{font-size:clamp(37px,10vw,65px);letter-spacing:3px;margin-top:235px}
+ .hero p{font-size:9px;letter-spacing:2px;line-height:1.8}
+ .manifesto{grid-template-columns:1fr;gap:22px;padding:55px 7%}
+ .manifesto img{max-height:300px}
+ .feature{grid-template-columns:1fr;gap:12px;padding:45px 7%}
+ .feature img{height:280px}
+ .feature.reverse img,.feature.reverse .copy{order:initial}
+ .gallery{padding:55px 6%}
+ .gallery-grid{grid-template-columns:1fr;gap:22px}
+ .gallery-card img,.gallery-card.central img{height:280px}
+ footer{flex-direction:column;text-align:center;line-height:1.8}
+}
 </style>
 </head>
 <body>
-<header><div class="logo">ADEGA RESERVA</div><a href="/">← INÍCIO</a></header>
-<section class="intro"><div class="eyebrow">SELEÇÃO ESPECIAL</div><h1>Coleção Exclusiva</h1><p>Descubra combinações marcantes e bebidas selecionadas.</p></section>
-<main class="grid">
-<article class="item"><img src="/assets/combo-jack.png" alt="Combo Jack Daniel’s" onerror="this.style.display='none'"><div class="item-info"><small>DESTILADOS</small><h2>Combo Jack Daniel’s</h2><p>Uma combinação marcante para compartilhar bons momentos.</p></div></article>
-<article class="item"><img src="/assets/corona.png" alt="Corona Extra" onerror="this.style.display='none'"><div class="item-info"><small>CERVEJAS</small><h2>Corona Extra</h2><p>Um clássico para aproveitar momentos especiais.</p></div></article>
-<article class="item"><img src="/assets/beefeater.png" alt="Beefeater Pink com energético" onerror="this.style.display='none'"><div class="item-info"><small>COMBINAÇÕES</small><h2>Beefeater Pink + energético</h2><p>Uma combinação vibrante para experimentar algo diferente.</p></div></article>
+<header>
+  <a class="logo" href="/">ADEGA RESERVA</a>
+  <nav>
+    <a href="#colecao">COLEÇÃO</a>
+    <a href="#experiencias">EXPERIÊNCIAS</a>
+    <a href="/">INÍCIO</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="colecao">
+  <div class="hero-mark">
+    <img src="/assets/02_buchanans_deluxe.png" alt="Buchanan's Deluxe">
+  </div>
+  <div class="hero-copy">
+    <div class="kicker">ADEGA RESERVA APRESENTA</div>
+    <h1>Seleção<br>Exclusiva</h1>
+    <p>Destilados · Cervejas · Combinações</p>
+    <a class="hero-link" href="#experiencias">DESCUBRA A COLEÇÃO</a>
+  </div>
+</section>
+
+<section class="manifesto" id="experiencias">
+  <div>
+    <div class="kicker">O PRAZER DOS DETALHES</div>
+    <h2>Escolhas que transformam cada ocasião.</h2>
+    <p>Uma seleção de rótulos marcantes e combinações especiais, pensada para acompanhar bons momentos.</p>
+  </div>
+  <img src="/assets/01_jack_daniels_maca_verde.png" alt="Jack Daniel's Maçã Verde">
+</section>
+
+<section class="feature">
+  <div class="copy">
+    <div class="kicker">01 — DESTILADOS</div>
+    <h2>Combo Jack Daniel’s</h2>
+    <p>Personalidade e sabor em uma combinação feita para momentos memoráveis.</p>
+  </div>
+  <img src="/assets/01_jack_daniels_maca_verde.png" alt="Combo Jack Daniel's">
+</section>
+
+<section class="feature reverse">
+  <div class="copy">
+    <div class="kicker">02 — CERVEJAS</div>
+    <h2>Corona Extra</h2>
+    <p>Um clássico refrescante para acompanhar encontros e ocasiões especiais.</p>
+  </div>
+  <img src="/assets/corona.png" alt="Corona Extra">
+</section>
+
+<section class="feature">
+  <div class="copy">
+    <div class="kicker">03 — COMBINAÇÕES</div>
+    <h2>Beefeater Pink + energético</h2>
+    <p>Uma combinação vibrante para quem busca uma experiência diferente.</p>
+  </div>
+  <img src="/assets/beefeater.png" alt="Beefeater Pink com energético">
+</section>
+
+<section class="gallery">
+  <div class="gallery-title">
+    <div class="kicker">ADEGA RESERVA</div>
+    <h2>Momentos para descobrir</h2>
+  </div>
+  <div class="gallery-grid">
+    <article class="gallery-card">
+      <img src="/assets/01_jack_daniels_maca_verde.png" alt="Jack Daniel's">
+      <h3>Jack Daniel’s</h3>
+      <p>Um rótulo de personalidade.</p>
+    </article>
+    <article class="gallery-card central">
+      <img src="/assets/02_buchanans_deluxe.png" alt="Buchanan's Deluxe">
+      <h3>Buchanan’s Deluxe</h3>
+      <p>Tradição e elegância em destaque.</p>
+    </article>
+    <article class="gallery-card">
+      <img src="/assets/03_vinho_reserva.png" alt="Vinho Reserva">
+      <h3>Vinho Reserva</h3>
+      <p>Uma escolha clássica.</p>
+    </article>
+  </div>
+</section>
 </main>
-<footer>ADEGA RESERVA</footer>
+
+<footer>
+  <span>ADEGA RESERVA</span>
+  <a href="/">← VOLTAR AO INÍCIO</a>
+</footer>
 </body>
 </html>
