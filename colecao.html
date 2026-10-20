@@ -84,6 +84,24 @@
 }
 </style>
 
+
+<style id="fundo-graffiti-azul">
+#produtos {
+  position: relative;
+  isolation: isolate;
+  background: transparent !important;
+}
+#produtos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/assets/fundo-graffiti-azul-desfocado.jpg?v=1')
+    center top / cover repeat-y;
+  z-index: -1;
+  pointer-events: none;
+}
+</style>
+
 </head><body><header><a class="logo" href="index.html">ADEGA RESERVA</a><nav><a href="#colecao">COLEÇÃO</a><a href="#produtos">PRODUTOS</a><a href="#detalhes">DETALHES</a></nav></header><main><section class="hero" id="colecao"><div class="hero-image"><img src="/assets/fundo-combo-jack.jpg" alt="Combo Jack Daniel’s"></div><div class="hero-copy"><a class="outline" href="#produtos">DESCUBRA A COLEÇÃO</a></div></section><section id="produtos"><article class="product"><div><div class="eyebrow">01 — DESTILADOS</div><h2>Combo Jack Daniel’s</h2><p>Jack Daniel’s, água de coco e energético em uma combinação marcante para compartilhar bons momentos.</p></div><img src="/assets/combo-jack.png" alt="Combo Jack Daniel’s com água de coco e energético"></article>
 <section class="beer-board" id="cervejas">
   <div class="beer-heading">
