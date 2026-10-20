@@ -435,7 +435,56 @@ body::before {
   color: #191919;
 }
 
+
+/* Ícones sociais dourados no rodapé */
+.rodape-marca {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.redes-sociais {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.redes-sociais a {
+  color: var(--dourado);
+  font-size: 23px;
+  line-height: 1;
+  text-decoration: none;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.redes-sociais a:hover,
+.redes-sociais a:focus-visible {
+  color: #f5e4b5;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .rodape {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .rodape-marca {
+    gap: 15px;
+  }
+
+  .redes-sociais {
+    gap: 16px;
+  }
+
+  .redes-sociais a {
+    font-size: 22px;
+  }
+}
+
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -545,8 +594,24 @@ body::before {
 </main>
 
 <footer class="rodape">
-  <span class="marca">ADEGA RESERVA</span>
-  <span>Uma seleção para bons momentos.</span>
+  <div class="rodape-marca">
+    <span class="marca">ADEGA RESERVA</span>
+    <nav class="redes-sociais" aria-label="Redes sociais">
+      <a href="https://wa.me/" target="_blank" rel="noopener noreferrer"
+         aria-label="WhatsApp" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+         aria-label="Instagram" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+         aria-label="Facebook" title="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+    </nav>
+  </div>
+  <span class="rodape-descricao">Uma seleção para bons momentos.</span>
 </footer>
 
 </body>
