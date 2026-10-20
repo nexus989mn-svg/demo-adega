@@ -93,7 +93,59 @@
   font-size:20px;
 }
 </style>
-\n</head><body><header><a class="logo" href="index.html">ADEGA RESERVA</a><nav><a href="#colecao">COLEÇÃO</a><a href="#produtos">PRODUTOS</a><a href="#detalhes">DETALHES</a></nav></header><main><section class="hero" id="colecao"><div class="hero-image"><img src="/assets/combo-jack-destaque.png" alt="Combo Jack Daniel’s"></div><div class="hero-copy"><div class="eyebrow">ADEGA RESERVA APRESENTA</div><h1>SELEÇÃO EXCLUSIVA</h1><p>RÓTULOS MARCANTES · COMBINAÇÕES ESPECIAIS</p><a class="outline" href="#produtos">DESCUBRA A COLEÇÃO</a></div></section><section id="produtos"><article class="product"><div><div class="eyebrow">01 — DESTILADOS</div><h2>Combo Jack Daniel’s</h2><p>Jack Daniel’s, água de coco e energético em uma combinação marcante para compartilhar bons momentos.</p></div><img src="/assets/combo-jack.png" alt="Combo Jack Daniel’s com água de coco e energético"></article><article class="product"><div><div class="eyebrow">02 — CERVEJAS</div><h2>Corona Extra</h2><p>Um clássico para aproveitar momentos especiais, com limão, gelo e boa companhia.</p></div><img src="/assets/corona.png" alt="Corona Extra com limão e gelo"></article><article class="product"><div><div class="eyebrow">03 — COMBINAÇÕES</div><h2>Beefeater Pink + energético</h2><p>Uma combinação de cores vibrantes e personalidade para quem procura algo diferente.</p></div><img src="/assets/beefeater-pink.png" alt="Beefeater Pink com energético"></article></section></main><footer><span>ADEGA RESERVA</span><a href="index.html">← INÍCIO</a><span>UMA SELEÇÃO PARA BONS MOMENTOS</span></footer>
+\n
+<style>
+.beer-board{padding:48px 7%;background:#080808;color:#fff;border-bottom:1px solid #30271b}
+.beer-heading{margin-bottom:26px}
+.beer-heading .eyebrow{color:#c7b28a;font-size:12px;letter-spacing:5px}
+.beer-heading h2{font-size:clamp(25px,5vw,38px);font-weight:400;margin:18px 0 10px;color:#f4eee5}
+.beer-heading p,.beer-copy p{color:#fff;line-height:1.65}
+.beer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px;align-items:start}
+.beer-card{min-width:0;background:#080808}
+.beer-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.beer-copy{padding:10px 0}
+.beer-copy h3{margin:0 0 8px;font-size:clamp(20px,4vw,30px);color:#fff}
+.beer-copy p{margin:0;font-size:15px}
+.corona-gold{color:#c7a253}.skol-blue{color:#1683ff}.bud-red{color:#ed3038}
+.skol-card{grid-column:2;grid-row:2}.bud-card{grid-column:1;grid-row:2}
+@media(max-width:480px){.beer-board{padding:38px 7%}.beer-grid{gap:18px 12px}.beer-copy p{font-size:13px}}
+</style>
+
+</head><body><header><a class="logo" href="index.html">ADEGA RESERVA</a><nav><a href="#colecao">COLEÇÃO</a><a href="#produtos">PRODUTOS</a><a href="#detalhes">DETALHES</a></nav></header><main>
+<section class="beer-board" id="cervejas">
+  <header class="beer-heading">
+    <span class="eyebrow">02 — CERVEJAS</span>
+    <h2>Uma seleção para cada ocasião</h2>
+    <p>Clássicos gelados para compartilhar bons momentos.</p>
+  </header>
+
+  <div class="beer-grid">
+    <article class="beer-card corona-card">
+      <img src="/assets/corona.png" alt="Corona Extra">
+      <div class="beer-copy">
+        <h3><span class="corona-gold">Corona</span> Extra</h3>
+        <p>Um clássico para aproveitar momentos especiais, com limão, gelo e boa companhia.</p>
+      </div>
+    </article>
+
+    <article class="beer-card skol-card">
+      <img src="/assets/skol-beats.jpg" alt="Skol Beats">
+      <div class="beer-copy">
+        <h3><span class="skol-blue">Skol Beats</span></h3>
+        <p>Uma opção marcante para curtir a ocasião.</p>
+      </div>
+    </article>
+
+    <article class="beer-card bud-card">
+      <img src="/assets/budweiser.jpg" alt="Budweiser">
+      <div class="beer-copy">
+        <h3><span class="bud-red">Budweiser</span></h3>
+        <p>Sabor e personalidade para os bons momentos.</p>
+      </div>
+    </article>
+  </div>
+</section>
+</main><footer><span>ADEGA RESERVA</span><a href="index.html">← INÍCIO</a><span>UMA SELEÇÃO PARA BONS MOMENTOS</span></footer>
 <script id="adega-tabuleiro-script">
 (() => {
   const headings = [...document.querySelectorAll('h1,h2,h3')];
