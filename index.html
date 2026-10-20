@@ -1,162 +1,449 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050608">
-<title>Adega Reserva | Bebidas & Experiências</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="Adega — bebidas selecionadas para momentos especiais.">
+<title>Adega | Bebidas selecionadas</title>
+
 <style>
-:root{--bg:#050608;--blue:#087cff;--gold:#d9a54b;--white:#f7f7f7;--muted:#b5b9c2;--line:#28313d}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}
-img{width:100%;height:100%;object-fit:cover;display:block}
-header{height:64px;position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 26px;background:#050608f5;border-bottom:1px solid #222b37;gap:20px}
-.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:14px;white-space:nowrap}
-.crest{width:39px;height:39px;border:1px solid var(--blue);transform:rotate(45deg);display:grid;place-items:center;color:var(--blue)}
-.crest span{transform:rotate(-45deg);font:24px Georgia}
-.brand small{display:block;color:#66aaff;font-size:7px;letter-spacing:2px;margin-top:4px}
-nav{display:flex;gap:24px}
-nav a{font-size:8px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:#d9dce1}
-nav a:first-child{color:var(--blue);border-bottom:2px solid var(--blue);padding-bottom:10px}
-.order{background:#00c83f;color:#fff;border-radius:30px;padding:13px 18px;font-size:9px;font-weight:800;white-space:nowrap}
-.hero{position:relative;min-height:450px;display:flex;align-items:center;padding:42px 5%;overflow:hidden;background:linear-gradient(90deg,#050608 0%,#050608ed 31%,#05060833 72%),url('/assets/hero.jpg') center 44%/cover}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#050608 0%,transparent 22%);pointer-events:none}
-.hero-copy{position:relative;z-index:1;max-width:470px}
-.kicker{font-size:9px;letter-spacing:3px;color:#4c9eff;text-transform:uppercase;font-weight:700}
-h1,h2,h3,p{margin-top:0}
-h1{font-size:clamp(38px,6vw,64px);line-height:.98;letter-spacing:-1.5px;margin:14px 0 16px;font-weight:900;text-transform:uppercase}
-h1 span,.blue{color:var(--blue)}
-.hero p{max-width:400px;font-size:12px;line-height:1.65;color:#b5bbc5}
-.actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
-.btn{display:inline-flex;padding:13px 22px;background:var(--blue);font-size:9px;letter-spacing:.8px;text-transform:uppercase;font-weight:800;box-shadow:0 0 18px #087cff38}
-.btn.ghost{background:#050608aa;border:1px solid #526072;box-shadow:none}
-.perks{position:absolute;bottom:18px;left:5%;right:5%;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.perk{display:flex;align-items:center;gap:10px}
-.perk i{width:35px;height:35px;border:1px solid #407cc0;border-radius:50%;display:grid;place-items:center;font-style:normal;color:#9bcaff;font-size:17px}
-.perk strong{font-size:8px;letter-spacing:.5px;display:block}
-.perk small{font-size:7px;letter-spacing:.7px;color:#858d9b;display:block;margin-top:4px}
-section{border-bottom:1px solid #1f2a36}
-.section{padding:22px 4.5%}
-.section-head{margin-bottom:15px}
-.section-head .kicker{font-size:8px;letter-spacing:2px}
-.section-head h2{font-size:clamp(24px,3.5vw,38px);font-weight:900;letter-spacing:-.8px;margin:5px 0 4px;text-transform:uppercase}
-.section-head p{font-size:10px;color:#b8bec7;margin:0}
-.combo-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.combo{min-height:260px;position:relative;overflow:hidden;border:1px solid #56452e;background:#111}
-.combo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#090909cf,#09090920),linear-gradient(0deg,#050608c7,transparent 50%),var(--photo) center/cover}
-.combo:nth-child(2):before{background:linear-gradient(90deg,#130b02a8,#130b0240),linear-gradient(0deg,#050608c7,transparent 50%),var(--photo) center/cover}
-.combo-copy{position:relative;padding:22px;max-width:65%}
-.combo h3{font-size:clamp(24px,3vw,38px);line-height:.98;margin:10px 0;text-transform:uppercase;font-weight:900}
-.combo p{font-size:9px;line-height:1.6;color:#d0d0d0}
-.combo .btn{padding:10px 12px;font-size:8px}
-.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
-.category{height:155px;position:relative;border:1px solid #303d4b;overflow:hidden;border-radius:4px}
-.category img{filter:brightness(.8);transition:.25s}
-.category:hover img{transform:scale(1.04)}
-.category:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#020407e8)}
-.category strong{position:absolute;z-index:1;bottom:12px;left:12px;font-size:9px;text-transform:uppercase}
-.menu{display:grid;grid-template-columns:1fr 1fr;min-height:260px;background:linear-gradient(90deg,#050608f7,#0506084c),url('/assets/drinks.jpg') center/cover}
-.menu-list{padding:24px}
-.menu-list h2{font-size:30px;text-transform:uppercase;margin:6px 0}
-.menu-list ul{padding:0;list-style:none;margin:12px 0}
-.menu-list li{font-size:9px;line-height:1.5;border-left:2px solid var(--blue);padding-left:9px;margin:7px 0}
-.menu-list li span{display:block;color:#a9b0bc;font-size:8px}
-.copao{min-height:170px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 5%;background:linear-gradient(90deg,#05060866,#05060840),url('/assets/crowd.jpg') center/cover}
-.copao h2{font-size:clamp(26px,4vw,42px);color:#ffd66b;margin:0 0 4px;text-transform:uppercase}
-.copao p{margin:0;color:#fff;font-size:16px}
-.copao .order{display:inline-flex;margin-top:10px}
-footer{padding:18px 4.5%;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.footlinks{display:flex;gap:13px;flex-wrap:wrap}
-.footlinks a{font-size:7px;color:#9ca6b5}
-.legal{text-align:right;font-size:6px;line-height:1.8;color:#8e96a3;letter-spacing:.4px}
-@media(min-width:900px){
-.hero{min-height:570px}.hero-copy{max-width:540px}.hero p{font-size:14px}
-.section{padding:34px 5%}.combo{min-height:350px}.categories{gap:14px}
-.category{height:220px}.menu{min-height:360px}.menu-list{padding:38px}.menu-list h2{font-size:40px}
+:root {
+  --preto: #151515;
+  --preto2: #202020;
+  --dourado: #c4a15b;
+  --branco: #f5f3ef;
+  --texto: #f5f3ef;
 }
-@media(max-width:600px){
-header{padding:0 15px;height:62px}.brand{font-size:12px}.crest{width:32px;height:32px}
-nav{display:none}.order{padding:12px 14px;font-size:8px}
-.hero{min-height:480px;padding:36px 5% 100px;background-position:58% center}
-.hero-copy{max-width:88%}h1{font-size:clamp(39px,10.5vw,58px)}
-.hero p{max-width:285px}.perks{left:5%;right:5%;gap:8px;bottom:13px}
-.perk{gap:5px}.perk i{width:28px;height:28px;font-size:13px}
-.perk strong{font-size:6px}.perk small{font-size:5px;letter-spacing:0}
-.section{padding:20px 4%}.section-head h2{font-size:26px}
-.section-head p{font-size:9px}.combo-grid{gap:8px}
-.combo{min-height:260px}.combo-copy{padding:12px;max-width:75%}
-.combo h3{font-size:clamp(20px,6vw,30px)}.combo p{font-size:8px}
-.combo .btn{font-size:7px;padding:9px 8px}
-.categories{grid-template-columns:repeat(2,1fr);gap:8px}
-.category{height:150px}.category strong{font-size:8px}
-.menu{grid-template-columns:1fr;min-height:370px;background-position:center}
-.menu-list{padding:20px}.menu-list h2{font-size:30px}.menu-list li{font-size:9px}
-.copao{min-height:170px;padding:20px 4%;background-position:center}
-.copao h2{font-size:24px}.copao p{font-size:13px}
-.copao .order{font-size:7px;padding:10px}
-footer{align-items:flex-start;padding:18px 4%;gap:12px}
-.footlinks{gap:8px}.legal{font-size:5px;max-width:45%}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--preto);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topo {
+  min-height: 76px;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4b3d26;
+  background: #111;
+}
+
+.marca {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  letter-spacing: 5px;
+  color: var(--dourado);
+}
+
+.menu {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  color: var(--dourado);
+}
+
+.botao {
+  display: inline-block;
+  border: 1px solid var(--dourado);
+  padding: 12px 20px;
+  color: var(--dourado);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+.botao:hover {
+  background: var(--dourado);
+  color: #111;
+}
+
+.hero {
+  min-height: 420px;
+  padding: 60px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  background:
+    radial-gradient(ellipse at 70% 50%, #373022 0%, #1c1b18 35%, #111 75%);
+  border-bottom: 2px solid var(--dourado);
+}
+
+.hero-conteudo {
+  max-width: 520px;
+}
+
+.etiqueta {
+  color: var(--dourado);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 66px);
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #c7c4bd;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.hero-detalhe {
+  text-align: center;
+  color: var(--dourado);
+  font-family: Georgia, serif;
+  font-size: clamp(35px, 5vw, 60px);
+  letter-spacing: 5px;
+}
+
+.faixa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 330px;
+}
+
+.faixa-imagem {
+  min-height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 22px;
+}
+
+.faixa-imagem img {
+  display: block;
+  max-width: 100%;
+  max-height: 390px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.faixa-texto {
+  padding: 48px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.faixa-texto h2 {
+  font-size: clamp(30px, 3.6vw, 46px);
+  line-height: 1.15;
+  margin-bottom: 17px;
+}
+
+.faixa-texto p {
+  max-width: 420px;
+  line-height: 1.8;
+  color: #c9c7c1;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.buchanans {
+  background: var(--branco);
+  color: #191919;
+}
+
+.buchanans .faixa-texto p {
+  color: #55524c;
+}
+
+.buchanans .etiqueta {
+  color: #82652f;
+}
+
+.maca {
+  background: #181818;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.reserva {
+  background: #22201d;
+}
+
+.reserva .faixa-texto {
+  background: #22201d;
+}
+
+.beneficios {
+  padding: 44px 6%;
+  background: #111;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: center;
+  border-top: 1px solid #4b3d26;
+}
+
+.beneficio {
+  padding: 12px;
+}
+
+.beneficio h3 {
+  color: var(--dourado);
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.beneficio p {
+  color: #aaa69d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.rodape {
+  padding: 28px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  border-top: 1px solid #393329;
+  color: #aaa69d;
+  font-size: 12px;
+}
+
+.rodape .marca {
+  font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .topo {
+    min-height: 66px;
+    padding: 16px 5%;
+  }
+
+  .marca {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .menu {
+    gap: 13px;
+    font-size: 9px;
+    letter-spacing: .5px;
+  }
+
+  .menu a:nth-child(2) {
+    display: none;
+  }
+
+  .hero {
+    min-height: 360px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 48px 7%;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero-detalhe {
+    font-size: 35px;
+  }
+
+  .faixa {
+    grid-template-columns: 1fr;
+  }
+
+  .faixa-imagem {
+    min-height: 260px;
+    max-height: 350px;
+    padding: 25px;
+  }
+
+  .faixa-imagem img {
+    max-height: 300px;
+  }
+
+  .faixa-texto {
+    padding: 35px 7% 42px;
+  }
+
+  .faixa-texto h2 {
+    font-size: 34px;
+  }
+
+  .buchanans .faixa-imagem {
+    order: 1;
+  }
+
+  .buchanans .faixa-texto {
+    order: 2;
+  }
+
+  .beneficios {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 28px 7%;
+  }
+
+  .rodape {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 </style>
 </head>
+
 <body>
-<header>
-<a class="brand" href="#inicio"><span class="crest"><span>R</span></span><span>ADEGA RESERVA<small>BEBIDAS & EXPERIÊNCIAS</small></span></a>
-<nav><a href="#inicio">Início</a><a href="#combos">Combos</a><a href="#bebidas">Bebidas</a><a href="#drinks">Drinks</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
-<a class="order" href="https://wa.me/?text=Ol%C3%A1%21%20Quero%20fazer%20um%20pedido">◉ PEDIR AGORA</a>
+
+<header class="topo">
+  <a class="marca" href="#inicio">ADEGA</a>
+
+  <nav class="menu">
+    <a href="#inicio">Início</a>
+    <a href="#colecao">Coleção</a>
+    <a href="#reserva">Reserva</a>
+  </nav>
 </header>
+
 <main>
-<section class="hero" id="inicio">
-<div class="hero-copy">
-<div class="kicker">Sua noite começa aqui</div>
-<h1>Seu momento.<br><span>Sua bebida.</span></h1>
-<p>Destilados, cervejas geladas e combos para transformar qualquer encontro em uma ocasião especial.</p>
-<div class="actions"><a class="btn" href="#combos">Ver combos →</a><a class="btn ghost" href="#bebidas">Explorar catálogo</a></div>
-</div>
-<div class="perks">
-<div class="perk"><i>♢</i><span><strong>SELEÇÃO ESPECIAL</strong><small>MARCAS QUE VOCÊ CONHECE</small></span></div>
-<div class="perk"><i>♧</i><span><strong>COMBOS PARA COMPARTILHAR</strong><small>ESCOLHA SEU PRÓXIMO BRINDE</small></span></div>
-<div class="perk"><i>♧</i><span><strong>ATENDIMENTO DIRETO</strong><small>CONSULTE DISPONIBILIDADE</small></span></div>
-</div>
-</section>
-<section class="section" id="combos">
-<div class="section-head"><div class="kicker">Escolhas da casa</div><h2>Combos em <span class="blue">destaque</span></h2><p>Combinações para curtir com os amigos. Consulte os sabores, marcas e disponibilidade.</p></div>
-<div class="combo-grid">
-<article class="combo" style="--photo:url('/assets/jack-redbull.jpg')"><div class="combo-copy"><div class="kicker">Combo de</div><h3>Jack</h3><p>1 JACK DANIEL'S Nº7<br>6 GELOS DE COCO<br>1 RED BULL</p><a class="btn" href="https://wa.me/?text=Quero%20o%20combo%20Jack">Quero esse combo →</a></div></article>
-<article class="combo" style="--photo:url('/assets/redlabel-coco.jpg')"><div class="combo-copy"><div class="kicker">Combo</div><h3>Red Label</h3><p>6 RED BULL<br>1 WHISKY RED LABEL<br>6 GELOS DE COCO</p><a class="btn" href="https://wa.me/?text=Quero%20o%20combo%20Red%20Label">Quero esse combo →</a></div></article>
-</div>
-</section>
-<section class="section" id="bebidas">
-<div class="section-head"><div class="kicker">Explore nossas categorias</div><h2>Mais para <span class="blue">aproveitar</span></h2><p>Explore as categorias e consulte os produtos disponíveis.</p></div>
-<div class="categories">
-<a class="category" href="#contato"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?auto=format&fit=crop&w=900&q=85" alt="Cervejas geladas"><strong>Cervejas geladas →</strong></a>
-<a class="category" href="#drinks"><img src="/assets/jack-redbull.jpg" alt="Drinks e coquetéis"><strong>Drinks & coquetéis →</strong></a>
-<a class="category" href="#contato"><img src="https://images.unsplash.com/photo-1536935338788846bb9981813?auto=format&fit=crop&w=900&q=85" alt="Bebidas refrescantes"><strong>Refrescantes →</strong></a>
-<a class="category" href="#combos"><img src="/assets/redlabel-coco.jpg" alt="Destilados"><strong>Destilados →</strong></a>
-</div>
-</section>
-<section class="menu" id="drinks">
-<div class="menu-list">
-<div class="kicker">Nosso cardápio</div><h2>Drinks <span class="blue">clássicos</span></h2>
-<p style="font-size:10px;color:#b5bac3">6 opções à escolha. Sabores que fazem sucesso.</p>
-<ul>
-<li>CAIPIRINHA<span>Cachaça, limão, açúcar, gelo</span></li>
-<li>CAIPIROSKA<span>Vodka, limão, açúcar, gelo</span></li>
-<li>CAIPIRUVA<span>Vinho, limão, açúcar, gelo</span></li>
-<li>DAIQUIRI DE FRUTILLA<span>Ron blanco, frutilla, almíbar, gelo, toque de limón</span></li>
-<li>DAIQUIRI DE DURAZNO<span>Ron blanco, durazno, almíbar, gelo, toque de limón</span></li>
-<li>PIÑA COLADA<span>Ron de coco, piña, leche de coco, hielo, almíbar</span></li>
-</ul>
-<a class="btn ghost" href="#contato">Ver cardápio completo →</a>
-</div>
-</section>
-<section class="copao" id="sobre"><div><h2>Temos copão</h2><p>Whisk · gin · vodka</p><a class="order" href="https://wa.me/?text=Quero%20fazer%20um%20pedido">◉ FAZER PEDIDO AGORA</a></div></section>
+  <section class="hero" id="inicio">
+    <div class="hero-conteudo">
+      <div class="etiqueta">Seleção especial</div>
+      <h1>Seu próximo brinde começa aqui.</h1>
+      <p>
+        Uma seleção de bebidas para celebrar os bons momentos,
+        com sabor, personalidade e qualidade.
+      </p>
+      <a class="botao" href="#colecao">Explorar seleção</a>
+    </div>
+
+    <div class="hero-detalhe" aria-label="Adega">
+      A<br>DEGA
+    </div>
+  </section>
+
+  <!-- FAIXA BRANCA: BUCHANAN'S -->
+  <section class="faixa buchanans" id="colecao">
+    <div class="faixa-imagem">
+      <img
+        src="public/images/01_buchanans_deluxe.jpg"
+        alt="Buchanan's Deluxe"
+        loading="eager"
+      >
+    </div>
+
+    <div class="faixa-texto">
+      <div class="etiqueta">Whisky selecionado</div>
+      <h2>Buchanan’s Deluxe</h2>
+      <p>
+        Um clássico para quem aprecia sabor e tradição.
+        Descubra nossa seleção de whisky.
+      </p>
+      <a class="botao" href="#reserva">Conhecer a seleção</a>
+    </div>
+  </section>
+
+  <!-- FAIXA PRETA: JACK DANIEL'S MAÇÃ VERDE -->
+  <section class="faixa maca">
+    <div class="faixa-texto">
+      <div class="etiqueta">Sabor marcante</div>
+      <h2>Jack Daniel’s Maçã Verde</h2>
+      <p>
+        Uma opção de personalidade para deixar cada ocasião
+        ainda mais especial.
+      </p>
+      <a class="botao" href="#reserva">Ver seleção</a>
+    </div>
+
+    <div class="faixa-imagem">
+      <img
+        src="public/images/02_jack_daniels_maca_verde.jpg"
+        alt="Jack Daniel's Maçã Verde"
+        loading="lazy"
+      >
+    </div>
+  </section>
+
+  <!-- FAIXA INFERIOR: VINHO RESERVA -->
+  <section class="faixa reserva" id="reserva">
+    <div class="faixa-imagem">
+      <img
+        src="public/images/08_reserva.jpg"
+        alt="Vinho Reserva"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="faixa-texto">
+      <div class="etiqueta">Para momentos especiais</div>
+      <h2>Vinho Reserva</h2>
+      <p>
+        Uma escolha clássica para acompanhar bons momentos
+        e ocasiões especiais.
+      </p>
+      <a class="botao" href="#inicio">Voltar ao início</a>
+    </div>
+  </section>
+
+  <section class="beneficios">
+    <div class="beneficio">
+      <h3>Seleção especial</h3>
+      <p>Bebidas escolhidas para diferentes preferências e ocasiões.</p>
+    </div>
+
+    <div class="beneficio">
+      <h3>Qualidade</h3>
+      <p>Uma experiência visual elegante, simples e fácil de navegar.</p>
+    </div>
+
+    <div class="beneficio">
+      <h3>Seu momento</h3>
+      <p>Encontre uma opção para celebrar cada ocasião.</p>
+    </div>
+  </section>
 </main>
-<footer id="contato">
-<div><a class="brand" href="#inicio"><span class="crest"><span>R</span></span><span>ADEGA RESERVA<small>BEBIDAS & EXPERIÊNCIAS</small></span></a><div class="footlinks" style="margin-top:12px"><a href="https://instagram.com/">◎ Instagram</a><a href="https://facebook.com/">● Facebook</a><a href="https://wa.me/">◉ WhatsApp</a></div></div>
-<div class="legal">© ADEGA RESERVA · TODOS OS DIREITOS RESERVADOS<br>BEBE COM RESPONSABILIDADE<br>PROIBIDA A VENDA PARA MENORES DE 18 ANOS</div>
+
+<footer class="rodape">
+  <span class="marca">ADEGA</span>
+  <span>Uma seleção para bons momentos.</span>
 </footer>
+
 </body>
 </html>
