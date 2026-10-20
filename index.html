@@ -11,7 +11,7 @@
 :root {
   --preto: #151515;
   --preto2: #202020;
-  --dourado: #c4a15b;
+  --dourado: #ead39a;
   --branco: #f5f3ef;
   --texto: #f5f3ef;
 }
@@ -126,7 +126,7 @@ h1, h2 {
 }
 
 .hero p {
-  color: #c7c4bd;
+  color: #f0eee8;
   font-size: 15px;
   line-height: 1.8;
   margin-bottom: 28px;
@@ -192,7 +192,7 @@ h1, h2 {
 
 .faixa-texto p {
   max-width: 600px;
-  color: #c9c7c1;
+  color: #e5e3dc;
   font-size: 14px;
   line-height: 1.8;
   margin-bottom: 24px;
@@ -248,7 +248,7 @@ h1, h2 {
 }
 
 .beneficio p {
-  color: #aaa69d;
+  color: #d2d0c8;
   font-size: 13px;
   line-height: 1.7;
 }
@@ -261,7 +261,7 @@ h1, h2 {
   gap: 18px;
   flex-wrap: wrap;
   border-top: 1px solid #393329;
-  color: #aaa69d;
+  color: #d2d0c8;
   font-size: 12px;
 }
 
@@ -374,58 +374,65 @@ h1, h2 {
 }
 
 
-/* Fundo abstrato verde da Adega */
-body {
-  background-color: #061006;
-  background-image:
-    linear-gradient(rgba(0, 12, 0, 0.72), rgba(0, 12, 0, 0.82)),
-    url('/assets/fundo-verde-adega.png');
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 
 
-
-
-/* FUNDO VERDE GLOBAL */
+/* FUNDO VERDE SUAVE */
 html, body {
-  background-color: #061006;
+  background: #061006;
 }
 
 body {
-  background-image:
-    linear-gradient(rgba(0, 10, 0, 0.30), rgba(0, 10, 0, 0.45)),
-    url('/assets/fundo-verde-adega.png');
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  position: relative;
+  isolation: isolate;
+  color: #f5f3ef;
 }
 
-/* Deixa o fundo visível nas áreas de conteúdo */
-.hero,
+body::before {
+  content: "";
+  position: fixed;
+  inset: -12px;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(0, 12, 0, 0.30), rgba(0, 12, 0, 0.42)),
+    url('/assets/fundo-verde-adega.png') center / cover no-repeat;
+  filter: blur(5px);
+  transform: scale(1.02);
+}
+
+/* Mais contraste sem esconder o fundo */
+.topo {
+  background: rgba(8, 16, 8, 0.88);
+  border-bottom-color: rgba(234, 211, 154, 0.45);
+}
+
+.hero {
+  background: linear-gradient(
+    rgba(3, 15, 4, 0.35),
+    rgba(3, 15, 4, 0.35)
+  );
+}
+
 .maca,
 .reserva,
 .reserva .faixa-texto,
 .beneficios {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
-.hero {
-  background-image: linear-gradient(
-    rgba(0, 10, 0, 0.35),
-    rgba(0, 10, 0, 0.35)
-  );
+.beneficios {
+  border-top-color: rgba(234, 211, 154, 0.4);
 }
 
-.topo {
-  background: rgba(10, 10, 10, 0.90);
+.rodape {
+  color: #d2d0c8;
+  border-top-color: rgba(234, 211, 154, 0.3);
 }
 
+/* Preserva a seção clara do Buchanan's */
 .buchanans {
-  background: var(--branco);
+  background: #f5f3ef;
+  color: #191919;
 }
 
 </style>
