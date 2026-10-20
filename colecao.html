@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080907">
+<title>ADEGA RESERVA | Coleção</title>
+<style>
+:root{--gold:#ead39a;--bg:#080907;--text:#f5f3ef;--muted:#dedbd2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+header{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;gap:18px;border-bottom:1px solid #594a2d}
+.brand{font:normal clamp(18px,3vw,27px) Georgia,serif;letter-spacing:.15em;color:var(--gold)}
+nav{display:flex;gap:22px;font-size:11px;text-transform:uppercase;letter-spacing:.12em}
+.hero{min-height:70vh;padding:7%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5%;background:radial-gradient(ellipse at 70% 50%,#29291f,#10110d 48%,#080907 80%)}
+.kicker,.num{font-size:10px;letter-spacing:.3em;color:var(--gold);margin-bottom:22px}
+h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:normal}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.05;margin-bottom:22px}
+.copy p,.intro{font-size:15px;line-height:1.9;color:var(--muted);max-width:490px;margin-bottom:26px}
+.button{display:inline-block;padding:14px 20px;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.visual img{display:block;width:100%;max-height:72vh;object-fit:contain}
+.hero .visual{display:flex;justify-content:center;align-items:center}
+.collection{padding:8% 7%;border-top:1px solid #3c3526;background:linear-gradient(120deg,#0b0d09,#10130d 60%,#080907)}
+.product{max-width:1250px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:8%}
+.product.reverse .visual{order:2}
+.copy h2{font-size:clamp(38px,5vw,66px);line-height:1.08;margin-bottom:22px}
+footer{padding:28px 6%;border-top:1px solid #594a2d;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px}
+@media(max-width:700px){
+header{align-items:flex-start;flex-direction:column;gap:14px}
+nav{width:100%;justify-content:space-between;gap:8px;font-size:9px}
+.hero{grid-template-columns:1fr;padding:48px 7%;gap:24px}
+h1{font-size:clamp(40px,11vw,60px)}
+.hero .visual img{max-height:52vh}
+.collection{padding:48px 7%}
+.product{grid-template-columns:1fr;gap:18px}
+.product.reverse .visual{order:0}
+.visual img{max-height:68vh}
+.copy h2{font-size:clamp(36px,10vw,52px)}
+footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header><a class="brand" href="/">ADEGA RESERVA</a><nav><a href="/">Início</a><a href="#combos">Combinações</a><a href="#bebidas">Bebidas</a></nav></header>
+<main>
+<section class="hero"><div><p class="kicker">ADEGA RESERVA · SELEÇÃO ESPECIAL</p><h1>Uma experiência feita para brindar.</h1><p class="intro">Combinações marcantes, bebidas selecionadas e inspiração para momentos especiais.</p><a class="button" href="#combos">EXPLORAR A SELEÇÃO</a></div><div class="visual"><img src="/assets/combo-jack.png" alt="Combo demonstrativo Jack Daniel’s"></div></section>
+<section class="collection" id="combos"><article class="product"><div class="visual"><img src="/assets/combo-jack.png" alt="Combo Jack Daniel’s com acompanhamentos"></div><div class="copy"><p class="num">01 / COMBINAÇÕES</p><h2>Combinações que surpreendem.</h2><p>Uma composição visual para inspirar sua próxima ocasião especial.</p><a class="button" href="#bebidas">PRÓXIMA SELEÇÃO</a></div></article></section>
+<section class="collection" id="bebidas"><article class="product reverse"><div class="visual"><img src="/assets/corona.png" alt="Corona Extra com gelo e limão"></div><div class="copy"><p class="num">02 / CLÁSSICOS</p><h2>Clássicos em destaque.</h2><p>Uma apresentação que valoriza a imagem e os detalhes de cada bebida.</p><a class="button" href="#novidades">CONTINUAR</a></div></article></section>
+<section class="collection" id="novidades"><article class="product"><div class="visual"><img src="/assets/beefeater.png" alt="Beefeater Pink com energético"></div><div class="copy"><p class="num">03 / NOVAS EXPERIÊNCIAS</p><h2>Cor, personalidade e atitude.</h2><p>Uma seleção demonstrativa para explorar novas combinações e estilos.</p><a class="button" href="/">VOLTAR AO INÍCIO</a></div></article></section>
+</main>
+<footer><a class="brand" href="/">ADEGA RESERVA</a><span>Uma seleção para bons momentos.</span></footer>
+</body></html>

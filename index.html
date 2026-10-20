@@ -569,6 +569,41 @@ body::before {
   }
 }
 
+
+/* Entrada para a coleção */
+.entrada-catalogo {
+  padding: 64px 7%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 18px;
+  border-top: 1px solid rgba(234,211,154,.4);
+  border-bottom: 1px solid rgba(234,211,154,.4);
+  background: rgba(0,12,0,.30);
+}
+.entrada-catalogo h2 {
+  font-family: Georgia,serif;
+  font-size: clamp(32px,6vw,54px);
+  font-weight: normal;
+  line-height: 1.12;
+}
+.entrada-catalogo > p:not(.etiqueta) {
+  color: #f5f3ef;
+  line-height: 1.8;
+}
+.entrada-catalogo .botao {
+  display: inline-block;
+  color: var(--dourado);
+  border: 1px solid var(--dourado);
+  padding: 14px 20px;
+}
+.entrada-catalogo .botao:hover {
+  color: #111;
+  background: var(--dourado);
+}
+
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -661,22 +696,12 @@ body::before {
     </div>
   </section>
 
-  <section class="beneficios">
-    <div class="beneficio">
-      <h3>Seleção especial</h3>
-      <p>Bebidas escolhidas para diferentes preferências e ocasiões.</p>
-    </div>
-
-    <div class="beneficio">
-      <h3>Qualidade</h3>
-      <p>Uma experiência visual elegante, simples e fácil de navegar.</p>
-    </div>
-
-    <div class="beneficio">
-      <h3>Seu momento</h3>
-      <p>Encontre uma opção para celebrar cada ocasião.</p>
-    </div>
-  </section>
+  <section class="entrada-catalogo">
+  <p class="etiqueta">ADEGA RESERVA APRESENTA</p>
+  <h2>Uma experiência feita para brindar.</h2>
+  <p>Combinações marcantes, clássicos e novas experiências para descobrir.</p>
+  <a class="botao" href="/colecao.html">EXPLORAR EXPERIÊNCIA</a>
+</section>
 </main>
 
 <footer class="rodape">
