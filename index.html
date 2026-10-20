@@ -663,6 +663,41 @@ footer,
 
 
 
+
+<style id="ajuste-imagens-bebidas">
+/* Red Label: foto inteira, sem cortes, ocupando a largura disponível */
+.red-label-destaque .faixa-imagem {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+.red-label-destaque .faixa-imagem img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Buchanan's: reduzir a altura, sem cortar nem esticar a imagem */
+.buchanans .faixa-imagem img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 600px) {
+  .red-label-destaque .faixa-imagem img,
+  .buchanans .faixa-imagem img {
+    max-height: 360px;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -691,7 +726,20 @@ footer,
   </section>
 
   <!-- FAIXA BRANCA: BUCHANAN'S -->
-  <section class="faixa buchanans" id="colecao">
+  
+<section class="faixa red-label-destaque" id="red-label-destaque">
+  <div class="faixa-imagem">
+    <img src="/assets/red-label-site.jpg" alt="Johnnie Walker Red Label">
+  </div>
+  <div class="faixa-texto">
+    <span class="etiqueta">WHISKY SELECIONADO</span>
+    <h2>Johnnie Walker Red Label</h2>
+    <p>Um whisky marcante, ideal para compartilhar bons momentos.</p>
+    <a class="botao" href="#reserva">CONHECER A SELEÇÃO</a>
+  </div>
+</section>
+
+<section class="faixa buchanans" id="colecao">
     <div class="faixa-imagem">
       <img
         src="/assets/02_buchanans_deluxe.png"
