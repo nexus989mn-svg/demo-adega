@@ -6,11 +6,19 @@
       "use": "@vercel/static"
     },
     {
+      "src": "colecao.html",
+      "use": "@vercel/static"
+    },
+    {
       "src": "public/assets/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/colecao.html",
+      "dest": "/colecao.html"
+    },
     {
       "src": "/assets/(.*)",
       "dest": "/public/assets/$1"
